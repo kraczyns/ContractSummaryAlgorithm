@@ -1,4 +1,4 @@
-package pl.edu.pwr;
+package pl.edu.pwr.utils;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
