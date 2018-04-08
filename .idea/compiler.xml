@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="IdeaProjects" />
+        <module name="morfologik-fsa" />
+        <module name="morfologik-fsa-builders" />
+        <module name="morfologik-polish" />
+        <module name="morfologik-speller" />
+        <module name="morfologik-stemming" />
+        <module name="morfologik-tools" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="IdeaProjects" target="1.8" />
+      <module name="morfologik-fsa" target="1.7" />
+      <module name="morfologik-fsa-builders" target="1.7" />
+      <module name="morfologik-parent" target="1.7" />
+      <module name="morfologik-polish" target="1.7" />
+      <module name="morfologik-speller" target="1.7" />
+      <module name="morfologik-stemming" target="1.7" />
+      <module name="morfologik-tools" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

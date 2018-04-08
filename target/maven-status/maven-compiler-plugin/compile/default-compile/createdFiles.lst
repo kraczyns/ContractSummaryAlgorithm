@@ -1,0 +1,11 @@
+pl\edu\pwr\Main.class
+pl\edu\pwr\contractsummarytest\MorfologikTest.class
+pl\edu\pwr\utils\Utils.class
+pl\edu\pwr\contractsummarytest\TextSentenceTest.class
+pl\edu\pwr\contractsummarytest\WordTest.class
+pl\edu\pwr\contractsummary\Tag.class
+pl\edu\pwr\contractsummary\Word.class
+pl\edu\pwr\contractsummary\Sentence.class
+pl\edu\pwr\utils\Constants.class
+pl\edu\pwr\contractsummary\Text.class
+pl\edu\pwr\contractsummarytest\TextWordTest.class
