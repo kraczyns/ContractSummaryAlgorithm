@@ -236,6 +236,8 @@ public class Constants {
     };
 
     public static String[] CITIES = {
+            "Bolesławiec",
+            "Wałbrzych",
             "Warszawa",
             "Kraków",
             "Łódź",
@@ -299,5 +301,19 @@ public class Constants {
         "ulica",
         "aleja",
         "plac"
+    };
+
+    public static String CONTRACT = "umowa";
+
+    public static String EMPLOYMENT_CONTRACT = "praca";
+
+    public static String CONTRACT_OF_MANDATE = "zlecenie";
+
+    public static String CONTRACT_WORK = "dzieło";
+
+    public static String[] LEASE_AGREEMENT = {
+            "najm",
+            "dzierżawa",
+            "leasing"
     };
 }

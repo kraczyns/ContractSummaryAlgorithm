@@ -30,20 +30,20 @@ public class TextWordTest {
     @Parameterized.Parameters
     public static Collection<Object[]> wordsSegmentationData() {
         return Arrays.asList(new Object[][] {
-                {"Ala ma psa.", new ArrayList<String>(
-                        Arrays.asList("Ala", "mieć", "pies"))},
+                    {"Zofia ma psa.", new ArrayList<String>(
+                        Arrays.asList("Zofia", "mieć", "pies"))},
                 {"Kot ma na imię Mruczek.", new ArrayList<String>(
-                        Arrays.asList("Kot", "mieć", "na", "imię", "Mruczek"))},
-                {"Ala ma kotkę, a Adam psa.", new ArrayList<String>(
-                    Arrays.asList("Ala", "mieć", "kotka", "a", "Adam", "pies"))},
+                        Arrays.asList("kot", "mieć", "na", "imię", "Mruczek"))},
+                {"Zofia ma kotkę, a Adam psa.", new ArrayList<String>(
+                    Arrays.asList("Zofia", "mieć", "kotka", "a", "Adam", "pies"))},
                 {"Zofia Kowalska ma zwierzątko.", new ArrayList<String>(
                         Arrays.asList("Zofia Kowalska", "mieć", "zwierzątko")
                 )},
                 {"Urodzona 15.10.1994 r.", new ArrayList<String>(
-                        Arrays.asList("Urodzona", "15.10.1994", "rok")
+                        Arrays.asList("urodzona", "15.10.1994", "rok")
                 )},
-                {"Ala mieszka przy ul. Grabiszyńskiej 18/5.", new ArrayList<String>(
-                        Arrays.asList("Ala", "mieszkać", "przy", "ul. Grabiszyńska 18/5")
+                {"Zofia mieszka przy ul. Grabiszyńskiej 18/5.", new ArrayList<String>(
+                        Arrays.asList("Zofia", "mieszkać", "przy", "ul. Grabiszyńska 18/5")
                 )}
         });
     }
@@ -51,7 +51,7 @@ public class TextWordTest {
     @Test
     public void testWordSegmentation() {
         Text text = new Text(input);
-        assertEquals(expected, Word.wordsToString(text.getWords().get(0)));
+        assertEquals(expected, Word.wordsToString(text.getSentences().get(0).getWords()));
     }
 
 

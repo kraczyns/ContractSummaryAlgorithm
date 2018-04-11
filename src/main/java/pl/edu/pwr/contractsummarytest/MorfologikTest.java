@@ -33,7 +33,10 @@ public class MorfologikTest {
                 {"Poznaniu", "Poznań"},
                 {"pracodawcą", "pracodawca"},
                 {"ulicy", "ulica"},
-                {"Adamem Nowakiem", "Adam Nowak"}
+                {"Adamem Nowakiem", "Adam Nowak"},
+                {"umowa o pracę", "umowa o praca"},
+                {"Pracodawcą", "Pracodawca"},
+                {"Analfabetą", "Analfabeta"}
 });
     }
     @Test
