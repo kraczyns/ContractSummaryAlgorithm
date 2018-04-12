@@ -75,13 +75,17 @@ public class Utils {
         return result.toArray(new String[result.size()]);
     }
     public static Boolean isDate(String string) {
-        String[] parts = string.split("\\.");
-        for (String part : parts) {
-            if(!Utils.isStringContainingOnlyDigits(part)) {
-                return false;
+        if (string.contains(".")) {
+            String[] parts = string.split("\\.");
+            for (String part : parts) {
+                if (!Utils.isStringContainingOnlyDigits(part)) {
+                    return false;
+                }
             }
+            return true;
+        } else {
+            return false;
         }
-        return true;
     }
 
     public static Boolean isFirstNameLastName(String string) {

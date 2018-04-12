@@ -42,15 +42,17 @@ public class TextSentenceTest {
                         "2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem.", new ArrayList<String>(
                         Arrays.asList("Umowa o pracę zawarta na czas nieokreślony zawarta w dniu 07.08.2018 r. w Poznaniu pomiędzy: 1. Polinvest z siedzibą przy ul. Głównej 8 w Poznaniu, zwanym dalej Pracodawcą, reprezentowane przez Kazimierza Boronia – Prezesa Zarządu. a 2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem."))},
                 {
-                    "Jan Kowalski\t\t\t\t\t\t\tBolesławiec, 07.04.2018\n" +
-                            "Ul. Kwiatowa 7/6, Bolesławiec\n" +
-                            "\n" +
-                            "\tFIRMEX S.A.\n" +
-                            "\tPl. Fiołkowy 123 - 167\n" +
-                            "\n" +
-                            "\n" +
+                        "Bolesławiec, \n" +
+                                "07.04.2018\n" +
+                                "\n" +
+                                "Jan Kowalski\t\t\t\t\t\t\t\n" +
+                                "Ul. Kwiatowa 7/6, \n" +
+                                "Bolesławiec\n" +
+                                "\n" +
+                                "\tFIRMEX S.A.\n" +
+                                "\tPl. Fiołkowy 123 - 167, Bolesławiec \n" +
                             "Rozwiązanie umowy o pracę na mocy porozumienia stron.", new ArrayList<String>(
-                        Arrays.asList("Jan Kowalski Bolesławiec, 07.04.2018 Ul. Kwiatowa 7/6, Bolesławiec FIRMEX S.A. Pl. Fiołkowy 123 - 167 Rozwiązanie umowy o pracę na mocy porozumienia stron."))
+                        Arrays.asList("Rozwiązanie umowy o pracę na mocy porozumienia stron."))
                 }
         });
     }

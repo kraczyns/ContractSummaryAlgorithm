@@ -34,109 +34,62 @@ public class Text {
     public Text() {}
 
     private void extractHeaders() {
-        String[] textParts = this.text.split(" ");
-        Boolean isSideFirst = false;
-        Boolean isSideSecond = false;
-        Boolean isAddress = false;
-        String headerDatePlace = "";
-        String headerSideFirst = "";
-        String headerSideSecond = "";
 
-        for (String part : textParts) {
+        // 0 - datePlace, 1 - sideFirst, 2 - sideSecond
+        int side = 0;
+        // headers[0] = datePlaceHeaders, headers[1] = sideFirstHeaders, headers[2] = sideSceondHeaders
+        String[] headers = {"", "", ""};
+        int index = 0;
 
-            part = part.replaceAll("\\.", "").replaceAll("\\,", "").trim();
+        for (String part : text.split(" ")) {
 
-            if (isContractTitle(part)) {
-                if (headerDatePlace.isEmpty()) {
-                    headerSideFirst = "";
-                    headerSideSecond = "";
-                } else if (!headerDatePlace.isEmpty() && headerSideSecond.isEmpty()) {
-                    String tmp = arrayToString(textParts);
-                    text = tmp.substring(tmp.indexOf(headerSideFirst));
-                    headerSideFirst = "";
-                } else if(!headerDatePlace.isEmpty() && !headerSideFirst.isEmpty() && !headerSideSecond.isEmpty()) {
+            String _part = part.replaceAll("\\.", "").replaceAll("\\,", "").trim();
 
+            //Sprawdzenie czy zaczęła się już umowa właściwa.
+            if (isContractTitle(_part)) {
+                // Scenariuz 1 - nie ma headerów
+                if(headers[0].isEmpty() && headers[2].isEmpty()) {
+                    headers[1] = "";
+                }
+                // Scenariusz 2 - nie ma daty oraz miasta, są dane osobowe
+                else if (headers[0].isEmpty() && (!headers[1].isEmpty() && !headers[2].isEmpty())) {
+                    index = headers[1].length() + headers[2].length();
+                }
+                // Scenariusz 3 - jest tylko data z miastem, nie ma danych osobowych
+                else if (!headers[0].isEmpty() && headers[2].isEmpty()) {
+                    index = headers[0].length();
+                    headers[1] = "";
+                    // Scenariusz 4 - wszystkie headery obecne
+                } else if(!headers[0].isEmpty() && !headers[1].isEmpty() && !headers[2].isEmpty()) {
+                    index = headers[0].length() + headers[1].length() + headers[2].length();
                 }
                 break;
             }
-            else if (Utils.isCity(part)) {
-                if (isSideFirst) {
-                    headerSideFirst += part + " ";
-                    isSideFirst = false;
-                    isAddress = false;
-                }
-                else if (isSideSecond){
-                    headerSideSecond += part + " ";
-                    isSideSecond = false;
-                    isAddress = false;
-                } else {
-                  headerDatePlace += part + " ";
-                }
+            /*
+            Sprawdzenie czy miasto
+            TODO :
+            sprawdzić czy morfologik nie określa czy coś jest miastem - nie będzie trzeba przeszukiwać po liście - sprawdzić, które rozwiązanie szybsze
+             */
+            else if (Utils.isCity(_part)) {
+                    headers[side] += part + " ";
+                    side = 0;
             }
-            else if (!isAddress) {
-                if (isHeaderDate(part)) {
-                    headerDatePlace += part + " ";
+            // Sprawdzenie czy data
+                else if (Utils.isDate(part)) {
+                    headers[side] += part + " ";
                 }
-                else if (isOnTheList(part, Constants.ADDRESS)) {
-                    if (isSideFirst) {
-                        headerSideFirst += part + " ";
-                    } else {
-                        headerSideSecond += part + " ";
-                    }
-
-                    isAddress = true;
+            // Sprawdzenie czy nazwa/imię -> początek danych jedenej strony
+                else if (!part.equals(part.toLowerCase()) && side == 0 && headers[2].isEmpty()) {
+                    side = headers[1].isEmpty() ? 1 : 2;
+                    headers[side] += part + " ";
                 }
-                else if (!part.equals(part.toLowerCase())) {
-                    if (headerSideFirst.isEmpty()) {
-                        isSideFirst = true;
-                        headerSideFirst += part + " ";
-                    }
-                    else if(!headerSideFirst.isEmpty() && headerSideSecond.isEmpty() && !isSideFirst) {
-                        isSideSecond = true;
-                        headerSideSecond += part + " ";
-                    }
-                    else if(isSideFirst) {
-                        headerSideFirst += part + " ";
-                    }
-                    else if(isSideSecond) {
-                        headerSideSecond += part + " ";
-                    }
-                    else if(!headerSideFirst.isEmpty() && !headerSideSecond.isEmpty()){
-                        String tmp = arrayToString(textParts);
-                        text = tmp.substring(tmp.indexOf(part));
-                        break;
-                    }
-            }
-            }
-             else if (isSideFirst || isSideSecond) {
-                if(isSideFirst) {
-                    headerSideFirst += part + " ";
-                } else if (isSideSecond) {
-                    headerSideSecond += part + " ";
-                }
-            }
-
-
-            /* TODO:
-            Funkcje w Utils - czy słowo to imię i czy to może być ulica
-
-            * */
-            //czy imię/nazwa
-            //czy data
-            //czy ulica
-            //czy miasto -> jak nic to nie ma headersów -> break return empty headers
-        }
-        header = new Header(headerDatePlace.trim(), headerSideFirst.trim(), headerSideSecond.trim());
-    }
-
-    private Boolean isHeaderDate(String string) {
-        for (int i = 0; i < string.length(); i++) {
-            char c = string.charAt(i);
-            if (!Character.isDigit(c)) {
-                return false;
+                // Kontynuacja dopisywania do danych osobowych - adresów itd., dopóki nie wystąpi miasto, ono powinno być ostatnie
+             else if (side != 0) {
+                    headers[side] += part + " ";
             }
         }
-        return true;
+        header = new Header(headers[0].trim(), headers[1].trim(), headers[2].trim());
+        text = text.substring(index);
     }
 
     private Boolean isContractTitle(String string) {

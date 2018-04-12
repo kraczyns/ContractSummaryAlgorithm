@@ -58,7 +58,18 @@ public class ExtractHeaderTest {
                         "Rozwiązanie umowy o pracę na mocy porozumienia stron.", new ArrayList<String>(
                         Arrays.asList("", "", "")),
                         "Rozwiązanie umowy o pracę na mocy porozumienia stron."
-                }
+                },
+                {
+                                "Jan Kowalski\t\t\t\t\t\t\t\n" +
+                                "Ul. Kwiatowa 7/6, \n" +
+                                "Bolesławiec\n" +
+                                "\n" +
+                                "\tFIRMEX S.A.\n" +
+                                "\tPl. Fiołkowy 123 - 167, Bolesławiec" +
+                                "\nRozwiązanie umowy o pracę na mocy porozumienia stron.", new ArrayList<String>(
+                        Arrays.asList("", "Jan Kowalski Ul. Kwiatowa 7/6, Bolesławiec", "FIRMEX S.A. Pl. Fiołkowy 123 - 167, Bolesławiec")),
+                        "Rozwiązanie umowy o pracę na mocy porozumienia stron."
+                },
         });
     }
     @Test
