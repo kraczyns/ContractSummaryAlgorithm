@@ -19,7 +19,6 @@ public class Main {
      filepath = S.nextLine();
      String toString = Utils.readFile(filepath);
      Contract contract =  new Contract(new Text(toString));
-
      try {
             contract.writeXMLtoFile();
         } catch (TransformerException e) {

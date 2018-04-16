@@ -351,4 +351,19 @@ public class Constants {
             "WORKING_HOURS",
             "SALARY"
     };
+
+    public static String[] CONTRACT_HEADERS = {
+            "PLACE_DATE",
+            "FIRST_SIDE",
+            "SECOND_SIDE",
+
+    };
+
+    public static String[] CONTRACT_GENERAL = {
+            "TYPE",
+            "FIRST_SIDE",
+            "SECOND_SIDE",
+            "CONCLUSION_PLACE",
+            "CONCLUSION_DATE",
+    };
 }

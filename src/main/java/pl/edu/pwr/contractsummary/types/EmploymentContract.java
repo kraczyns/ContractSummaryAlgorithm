@@ -73,7 +73,6 @@ public class EmploymentContract extends Contract {
             startDate = findStartDate(getText());
             workingHours = findWorkingHours(getText());
             salary = findSalary(getText());
-            createEmploymentContractSumarization();
     }
 
     private String findWorkingHours(Text text) {
@@ -172,19 +171,11 @@ public class EmploymentContract extends Contract {
             return ContractPeriod.other;
     }
 
-public void createEmploymentContractSumarization() {
+public String[] getEmploymentContractSumarizationFields() {
     String[] values = {
             contractPeriod.toString(), definitePeriod, hourlyDimension.toString(), Integer.toString(partTimeDimension),
             position, workingPlace, startDate, workingHours, salary
             };
-    Document doc = getDocument();
-    Element details = doc.createElement("DETAILS");
-    doc.getElementById("rootElement").appendChild(details);
-    for (int i = 0; i < Constants.EMPLOYMENT_CONTRACT_HEADERS.length; i++){
-        Element elem = doc.createElement(Constants.EMPLOYMENT_CONTRACT_HEADERS[i]);
-        elem.appendChild(doc.createTextNode(values[i]));
-        details.appendChild(elem);
-    }
-    setDocument(doc);
+    return values;
 }
 }
