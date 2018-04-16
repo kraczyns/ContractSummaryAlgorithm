@@ -7,5 +7,6 @@ public enum Tag {
     city,
     firstNameLastName,
     otherName,
+    ordinalNumber,
     text
 }

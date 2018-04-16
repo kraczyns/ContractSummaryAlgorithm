@@ -25,7 +25,7 @@ public class Text {
 
     public Text(String text) {
         this.sentences = new ArrayList<Sentence>();
-        this.text = text.replaceAll("\\r|\\n|\\t", " ").replaceAll("\\s+", " ").replaceAll("\\.\\.", "");
+        this.text = text.replaceAll("\\r|\\n|\\t", " ").replaceAll("\\s+", " ").replaceAll("\\.\\.", "").replaceAll("\uFEFF", "");
         extractHeaders();
         sentencesSegmentation();
         wordsSegmentation();
@@ -75,8 +75,8 @@ public class Text {
                     side = 0;
             }
             // Sprawdzenie czy data
-                else if (Utils.isDate(part)) {
-                    headers[side] += part + " ";
+                else if (Utils.isDate(part) || Utils.areStringsSame("r.", part.trim())) {
+                    headers[0] += part + " ";
                 }
             // Sprawdzenie czy nazwa/imię -> początek danych jedenej strony
                 else if (!part.equals(part.toLowerCase()) && side == 0 && headers[2].isEmpty()) {
@@ -123,23 +123,25 @@ public class Text {
                             tmp.add(new Word(content));
                             begin = i;
                             PALP = false;
+                            PA = false;
                         }
                         if(isPotentialAddressLastPart(sign)) {
                             PALP = true;
                         }
                     } else {
-                        if (!isPotentialName(content, sign, tmp.isEmpty())) {
+                        if (!isPotentialName(content, sign, tmp.isEmpty()) && !isPrize(content, sign)) {
                             if (!isPotentialAddress(content, sign)) {
-                                if (begin ==0 && !PN && !isOnTheList(content.trim(), Constants.FIRSTNAMES)) {
+                                if (begin == 0 && !PN && !Utils.isOnTheList(content.trim(), Constants.FIRSTNAMES)) {
                                     tmp.add(new Word(content.toLowerCase()));
-                                } else {
-                                    tmp.add(new Word(content));
-                                }
+                                } else if (Constants.DASH.indexOf(content.trim()) == -1 ) {
+                                        tmp.add(new Word(content));
+                                 }
                                 begin = i;
                                 PN = false;
                             } else {
                                 PA = true;
                             }
+
                         } else {
                             PN = true;
                         }
@@ -191,14 +193,25 @@ public class Text {
         }
     }
 
+    private Boolean isPrize(String content, char sign) {
+        if ((Utils.isStringContainingOnlyDigits(content.replaceAll(" ", "")) && sign == 'z') || (Utils.isStringContainingOnlyDigits(content.trim()) && Character.isDigit(sign))) {
+            return true;
+        }
+        return false;
+    }
+
     //potencjalna nazwa
     private Boolean isPotentialName(String string, char sign, boolean isFirst) {
         if (isUpperCase(string.charAt(0)) && isUpperCase(sign)) {
             if (isFirst && string.split(" ").length == 1) {
-                if (isOnTheList(string.trim(), Constants.FIRSTNAMES)) {
+                if (Utils.isOnTheList(string.trim(), Constants.FIRSTNAMES)) {
                     return true;
                 }
-            } else {
+            }
+            else if (Utils.isOnTheList(Word.useMorfologik(string.trim().toLowerCase()), Constants.IGNORE_NAME)) {
+                return false;
+            }
+            else{
                 return true;
             }
         }
@@ -209,7 +222,7 @@ public class Text {
     private Boolean isPotentialAddress(String string, char sign) {
         if(string.contains(".") && isUpperCase(sign)) {
             string = string.replaceAll("\\.", "");
-            if (isOnTheList(string.trim(), Constants.ADDRESS)) {
+            if (Utils.isOnTheList(string.trim(), Constants.ADDRESS)) {
                 return true;
             }
             else {
@@ -261,24 +274,17 @@ public class Text {
         if(Character.isUpperCase(lastSign) && Character.isUpperCase(sign)) {
             return false;
         }
-        else if (isOnTheList(parts[parts.length - 1], Constants.SHORTCUTS_NOT_ENDING_SENTENCE)) {
+        else if (Utils.isOnTheList(parts[parts.length - 1], Constants.SHORTCUTS_NOT_ENDING_SENTENCE)) {
             return false;
         }
-        else if (isOnTheList(parts[parts.length - 1], Constants.SHORTCUTS)) {
+        else if (Utils.isOnTheList(parts[parts.length - 1], Constants.SHORTCUTS)) {
             return true;
         }
 
         return true;
     }
 
-    private Boolean isOnTheList(String string, String[] list) {
-        for (String element : list) {
-            if (Utils.areStringsSame(element, string)) {
-                return true;
-            }
-        }
-        return false;
-    }
+
 
 
 }

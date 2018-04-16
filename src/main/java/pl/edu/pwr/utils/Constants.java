@@ -303,7 +303,7 @@ public class Constants {
         "plac"
     };
 
-    public static String CONTRACT = "umowa";
+    public static String[] CONTRACT = { "umowa", "umowy" };
 
     public static String EMPLOYMENT_CONTRACT = "praca";
 
@@ -315,5 +315,40 @@ public class Constants {
             "najm",
             "dzierżawa",
             "leasing"
+    };
+
+    public static String[] IGNORE_NAME = {
+            "pan",
+            "pani",
+            "pracodawca",
+            "pracownik"
+    };
+
+    public static String DASH = "-—–";
+
+    public static String INDEFINITE_PERIOD = "nieokreślony";
+
+    public static String DEFINITE_PERIOD = "określony";
+
+    public static String PROBATIONARY_PERIOD = "próbny";
+
+    public static String POSITION = "stanowisko";
+
+    public static String[] WORKING_PLACE = {"wykonywać", "miejsce", "siedziba"};
+
+    public static String[] START_DATE = {"począć", "rozpoczęcie", "dzień"};
+
+    public static String BRUTTO = "brutto";
+
+    public static String[] EMPLOYMENT_CONTRACT_HEADERS = {
+            "CONTRACT_PERIOD",
+            "DEFINITE_PERIOD",
+            "HOURLY_DIMENSION",
+            "PART_TIME_DIMENSION",
+            "POSITION",
+            "WORKING_PLACE",
+            "START_DATE",
+            "WORKING_HOURS",
+            "SALARY"
     };
 }

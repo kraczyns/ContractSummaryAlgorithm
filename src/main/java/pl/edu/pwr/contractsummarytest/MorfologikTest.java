@@ -36,7 +36,9 @@ public class MorfologikTest {
                 {"Adamem Nowakiem", "Adam Nowak"},
                 {"umowa o pracę", "umowa o praca"},
                 {"Pracodawcą", "Pracodawca"},
-                {"Analfabetą", "Analfabeta"}
+                {"Analfabetą", "Analfabeta"},
+                {"począwszy", "począć"},
+                {"rozpoczęcia", "rozpoczęcie"}
 });
     }
     @Test

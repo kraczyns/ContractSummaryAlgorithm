@@ -44,7 +44,25 @@ public class TextWordTest {
                 )},
                 {"Zofia mieszka przy ul. Grabiszyńskiej 18/5.", new ArrayList<String>(
                         Arrays.asList("Zofia", "mieszkać", "przy", "ul. Grabiszyńska 18/5")
-                )}
+                )},
+                {"..........................................................\t\t\t\t\t07.08.2018 r.  \n" +
+                        "\n" +
+                        "Umowa o pracę zawarta na czas nieokreślony\n" +
+                        "\n" +
+                        "zawarta w dniu 07.08.2018 r. w Poznaniu pomiędzy:\n" +
+                        "1. Polinvest z siedzibą przy ul. Głównej 8 w Poznaniu, zwanym dalej Pracodawcą, reprezentowane przez Kazimierza Boronia – Prezesa Zarządu.\n" +
+                        "a\n" +
+                        "2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem.", new ArrayList<String>(
+                        Arrays.asList("umowa", "o", "praca", "zawarty", "na", "czas", "nieokreślony", "zawarty", "w", "dzień", "07.08.2018", "r", "w",
+                                "Poznań", "pomiędzy", "1", "Polinvest", "z", "siedziba", "przy", "ul. Główny 8", "w", "Poznań", "zwać", "dalej", "Pracodawca", "reprezentować",
+                                "przez", "Kazimierz Boroń", "Prezes Zarządu", "a",
+                                        "2", "Pan", "Adam Nowak", "zamieszkały", "przy", "ul. Rybnicki 9", "w", "Poznań", "zwać", "dalej", "Pracownik"))},
+                {"1. Polinvest z siedzibą przy ul. Głównej 8 w Poznaniu, zwanym dalej Pracodawcą, reprezentowane przez Kazimierza Boronia – Prezesa Zarządu.\n" +
+                        "a\n" +
+                        "2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem.", new ArrayList<String>(
+                        Arrays.asList("1", "Polinvest", "z", "siedziba", "przy", "ul. Główny 8", "w", "Poznań", "zwać", "dalej", "Pracodawca", "reprezentować",
+                                "przez", "Kazimierz Boroń", "Prezes Zarządu", "a",
+                                "2", "Pan", "Adam Nowak", "zamieszkały", "przy", "ul. Rybnicki 9", "w", "Poznań", "zwać", "dalej", "Pracownik")) }
         });
     }
 

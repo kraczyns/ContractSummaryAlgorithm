@@ -38,7 +38,7 @@ public class WordTest {
                 {"Kazimierz Boroń", Tag.firstNameLastName},
                 {"Poznań", Tag.city},
                 {"Polinvest", Tag.otherName},
-                {"Pracodawca", Tag.otherName},
+                {"Pracodawca", Tag.text},
                 {"kot", Tag.text}
         });
     }

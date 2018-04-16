@@ -1,8 +1,21 @@
 package pl.edu.pwr.contractsummary;
 
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import pl.edu.pwr.contractsummary.types.EmploymentContract;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -79,21 +92,46 @@ public class Contract {
     String conclusionPlace;
     List<String> sides;
     Text text;
+    Document document;
+
+    public void setText(Text text) {
+        this.text = text;
+    }
+
+    public Document getDocument() {
+        return document;
+    }
+
+    public void setDocument(Document document) {
+        this.document = document;
+    }
 
     public Contract(Text text) {
         this.text = text;
         Sentence sentence = selectSentenceWhenContractWordAppearsFirst();
         findContractType(sentence);
         this.sides = new ArrayList<String>();
+        for (int i = 0; i < 2; i++) {
+            this.sides.add("");
+        }
+        conclusionDate = conclusionPlace = "";
         findContractSides(sentence);
         findConclusionDate(sentence);
         findConclusionPlace(sentence);
+        createContractSumarizationXML();
+        if (getContractType().equals(ContractType.employmentContract.toString())) {
+            EmploymentContract ec = new EmploymentContract();
+            ec.setText(text);
+            ec.setDocument(getDocument());
+            ec.setEmploymentContractFields();
+        }
     }
 
     public Contract() {
 
     }
 
+    public Text getText() { return text; }
     public String getContractType() {
         return contractType.toString();
     }
@@ -139,28 +177,29 @@ public class Contract {
     }
 
     private void findContractSides(Sentence sentence) {
+        int side = 0;
         if (null != sentence) {
             for (Word word : sentence.getWords()) {
                 if (word.getTag() == Tag.firstNameLastName || word.getTag() == Tag.otherName) {
-                    if (!ignore(word)) {
-                        this.sides.add(word.getContent());
-                        if (sides.size() == 2) {
-                            break;
-                        }
+                        sides.set(side, sides.get(side)  + word.getContent() + " ");
+                }
+                else if (word.getContent().equals("a")) {
+                    side++;
+                    if (side == 2) {
+                        break;
+                    }
+                } else if (word.getContent().equals("zwać")) {
+                    if (side == 1) {
+                        break;
                     }
                 }
             }
+            sides.set(0, sides.get(0).trim());
+            sides.set(1, sides.get(1).trim());
+
         }
     }
 
-    private Boolean ignore(Word word) {
-        if (this.contractType == ContractType.contractOfMandate || this.contractType == ContractType.contractWork || this.contractType == ContractType.employmentContract) {
-            if (Utils.areStringsSame(word.getContent(), "pracodawca") || Utils.areStringsSame(word.getContent(), "pracownik")) {
-                return true;
-            }
-        }
-        return false;
-    }
     private void findConclusionDate(Sentence sentence) {
         if (null != sentence) {
             for (Word word : sentence.getWords()) {
@@ -185,11 +224,62 @@ public class Contract {
         List<Sentence> textSentences = text.getSentences();
         for (Sentence sentence : textSentences) {
             for (Word word : sentence.getWords()) {
-                if (Utils.areStringsSame(word.getContent(), Constants.CONTRACT)) {
+                if (Utils.isOnTheList(word.getContent(), Constants.CONTRACT)) {
                     return sentence;
                 }
             }
         }
         return null;
     }
+
+    private void createContractSumarizationXML() {
+        try {
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
+            Document doc = docBuilder.newDocument();
+            Element rootElement = doc.createElement("CONTRACT");
+            doc.appendChild(rootElement);
+            Element headers = doc.createElement("HEADERS");
+            rootElement.appendChild(headers);
+            Element placeDate = doc.createElement("PLACE_DATE_H");
+            placeDate.appendChild(doc.createTextNode(this.text.getHeader().getPlaceDate()));
+            headers.appendChild(placeDate);
+            Element hFirstSide = doc.createElement("FIRST_SIDE_H");
+            hFirstSide.appendChild(doc.createTextNode(this.text.getHeader().getSideOne()));
+            headers.appendChild(hFirstSide);
+            Element hSecondSide = doc.createElement("SECOND_SIDE_H");
+            hSecondSide.appendChild(doc.createTextNode(this.text.getHeader().getSideTwo()));
+            headers.appendChild(hSecondSide);
+            Element general = doc.createElement("GENERAL");
+            rootElement.appendChild(general);
+            Element type = doc.createElement("TYPE");
+            type.appendChild(doc.createTextNode(this.contractType.toString()));
+            general.appendChild(type);
+            Element firstSide = doc.createElement("FIRST_SIDE");
+            firstSide.appendChild(doc.createTextNode(null != this.sides ? this.sides.get(0) : ""));
+            general.appendChild(firstSide);
+            Element secondSide = doc.createElement("SECOND_SIDE");
+            secondSide.appendChild(doc.createTextNode(this.sides.size() == 2 ? this.sides.get(1) : ""));
+            general.appendChild(secondSide);
+            Element conclusionPlace = doc.createElement("CONCLUSION_PLACE");
+            conclusionPlace.appendChild(doc.createTextNode(this.conclusionPlace));
+            general.appendChild(conclusionPlace);
+            Element conclusionDate = doc.createElement("CONCLUSION_DATE");
+            conclusionDate.appendChild(doc.createTextNode(this.conclusionDate));
+            general.appendChild(conclusionDate);
+            document = doc;
+        } catch (ParserConfigurationException pce) {
+            pce.printStackTrace();
+        }
+    }
+
+    public void writeXMLtoFile() throws TransformerException {
+        DOMSource source = new DOMSource(document);
+        StreamResult result = new StreamResult(new File("/Users/nieop/myXML/summary.xml"));
+        TransformerFactory transformerFactory = TransformerFactory.newInstance();
+        Transformer transformer = transformerFactory.newTransformer();
+        transformer.transform(source, result);
+        System.out.println("File saved!");
+    }
+
 }

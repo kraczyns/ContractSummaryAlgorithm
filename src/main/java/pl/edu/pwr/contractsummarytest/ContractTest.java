@@ -25,7 +25,23 @@ public class ContractTest {
                 {Field.CONTRACT_SIDES, "Umowa o pracę zawarta na czas nieokreślony między firmą Polinvest a Janiną Nowak w Poznaniu dnia 15.10.2018.", "Polinvest Janina Nowak"},
                 {Field.CONTRACT_SIDES, "Umowa o pracę zawarta na czas nieokreślony między firmą Polinvest, zwanym dalej Pracodawcą a Janiną Nowak, zwaną dalej Pracownikiem, w Poznaniu dnia 15.10.2018.", "Polinvest Janina Nowak"},
                 {Field.CONCLUSION_DATE, "Umowa o pracę zawarta na czas nieokreślony między Adamem Kowalskim a Janiną Nowak w Poznaniu dnia 15.10.2018.", "15.10.2018"},
-                {Field.CONCLUSION_PLACE, "Umowa o pracę zawarta na czas nieokreślony między Adamem Kowalskim a Janiną Nowak w Poznaniu dnia 15.10.2018.", "Poznań"}
+                {Field.CONCLUSION_PLACE, "Umowa o pracę zawarta na czas nieokreślony między Adamem Kowalskim a Janiną Nowak w Poznaniu dnia 15.10.2018.", "Poznań"},
+                {Field.CONTRACT_SIDES, "..........................................................\t\t\t\t\t07.08.2018 r.  \n" +
+                        "\n" +
+                        "Umowa o pracę zawarta na czas nieokreślony\n" +
+                        "\n" +
+                        "zawarta w dniu 07.08.2018 r. w Poznaniu pomiędzy:\n" +
+                        "1. Polinvest z siedzibą przy ul. Głównej 8 w Poznaniu, zwanym dalej Pracodawcą, reprezentowane przez Kazimierza Boronia – Prezesa Zarządu.\n" +
+                        "a\n" +
+                        "2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem.", "Polinvest Kazimierz Boroń Prezes Zarządu Adam Nowak"},
+                {Field.CONCLUSION_DATE, "..........................................................\t\t\t\t\t07.08.2018 r.  \n" +
+                        "\n" +
+                        "Umowa o pracę zawarta na czas nieokreślony\n" +
+                        "\n" +
+                        "zawarta w dniu 07.08.2018 r. w Poznaniu pomiędzy:\n" +
+                        "1. Polinvest z siedzibą przy ul. Głównej 8 w Poznaniu, zwanym dalej Pracodawcą, reprezentowane przez Kazimierza Boronia – Prezesa Zarządu.\n" +
+                        "a\n" +
+                        "2. Panem Adamem Nowakiem, zamieszkałym przy ul. Rybnickiej 9 w Poznaniu, zwanym dalej Pracownikiem.", "07.08.2018"}
         });
     }
 
