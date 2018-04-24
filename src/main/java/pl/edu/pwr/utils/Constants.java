@@ -324,7 +324,7 @@ public class Constants {
             "pracownik"
     };
 
-    public static String DASH = "-—–";
+    public static String SPECIAL_CHARACTERS = "-—–";
 
     public static String INDEFINITE_PERIOD = "nieokreślony";
 
@@ -352,6 +352,13 @@ public class Constants {
             "SALARY"
     };
 
+    public static String[] TERMINATION_CONTRACT_HEADERS = {
+            "PREVIOUS_CONTRACT_DATE",
+            "PREVIOUS_CONTRACT_PLACE",
+            "CONTRACT_EFFECT_DATE",
+            "REQUESTING_PARTY"
+    };
+
     public static String[] CONTRACT_HEADERS = {
             "PLACE_DATE",
             "FIRST_SIDE",
@@ -365,5 +372,17 @@ public class Constants {
             "SECOND_SIDE",
             "CONCLUSION_PLACE",
             "CONCLUSION_DATE",
+    };
+
+    public static String[] DENUNCIATION = {
+            "wypowiedzenie",
+            "rozwiązanie",
+            "zerwanie"
+    };
+
+    public static String[] PERIOD = {
+            "dniowy",
+            "tygodniowy",
+            "miesięczny",
     };
 }

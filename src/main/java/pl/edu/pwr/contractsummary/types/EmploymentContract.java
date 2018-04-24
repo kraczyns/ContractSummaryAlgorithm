@@ -1,18 +1,13 @@
 package pl.edu.pwr.contractsummary.types;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import pl.edu.pwr.contractsummary.Contract;
-import pl.edu.pwr.contractsummary.Sentence;
-import pl.edu.pwr.contractsummary.Text;
-import pl.edu.pwr.contractsummary.Word;
+import pl.edu.pwr.contractsummary.IContractTypes;
+import pl.edu.pwr.contractsummary.segmentation.Sentence;
+import pl.edu.pwr.contractsummary.segmentation.Text;
+import pl.edu.pwr.contractsummary.segmentation.Word;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
-import java.util.Arrays;
-import java.util.List;
-
-public class EmploymentContract extends Contract {
+public class EmploymentContract implements IContractTypes{
 
     private ContractPeriod contractPeriod;
     private String definitePeriod;
@@ -24,7 +19,16 @@ public class EmploymentContract extends Contract {
     private String workingHours;
     private String salary;
 
-    public EmploymentContract() {
+    public EmploymentContract(Text text) {
+        definitePeriod = "1 rok";
+        contractPeriod = findContractPeriod(text);
+        hourlyDimension = findHourlyDimension(text);
+        partTimeDimension = 1;
+        position = findPosition(text);
+        workingPlace = findWorkingPlace(text);
+        startDate = findStartDate(text);
+        workingHours = findWorkingHours(text);
+        salary = findSalary(text);
     }
 
     public ContractPeriod getContractPeriod() {
@@ -61,18 +65,6 @@ public class EmploymentContract extends Contract {
 
     public String getWorkingPlace() {
         return workingPlace;
-    }
-
-    public void setEmploymentContractFields() {
-            definitePeriod = "1 rok";
-            contractPeriod = findContractPeriod(getText());
-            hourlyDimension = findHourlyDimension(getText());
-            partTimeDimension = 1;
-            position = findPosition(getText());
-            workingPlace = findWorkingPlace(getText());
-            startDate = findStartDate(getText());
-            workingHours = findWorkingHours(getText());
-            salary = findSalary(getText());
     }
 
     private String findWorkingHours(Text text) {
@@ -171,11 +163,16 @@ public class EmploymentContract extends Contract {
             return ContractPeriod.other;
     }
 
-public String[] getEmploymentContractSumarizationFields() {
-    String[] values = {
-            contractPeriod.toString(), definitePeriod, hourlyDimension.toString(), Integer.toString(partTimeDimension),
-            position, workingPlace, startDate, workingHours, salary
-            };
-    return values;
-}
+    @Override
+    public String[] getContractTypeFields() {
+        return new String[] {
+                contractPeriod.toString(), definitePeriod, hourlyDimension.toString(), Integer.toString(partTimeDimension),
+                position, workingPlace, startDate, workingHours, salary
+        };
+    }
+
+    @Override
+    public String[] getDetailsHeaders() {
+        return Constants.EMPLOYMENT_CONTRACT_HEADERS;
+    }
 }

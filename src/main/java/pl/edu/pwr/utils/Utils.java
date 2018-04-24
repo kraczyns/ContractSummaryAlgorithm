@@ -155,4 +155,36 @@ public class Utils {
         }
         return false;
     }
+
+    public static Boolean isUpperCase(char sign) {
+        if (String.valueOf(sign).toLowerCase().equals(String.valueOf(sign))) {
+            return false;
+        }
+        else return true;
+    }
+
+    public static Boolean isStringContainingDigitsAndSigns(String string) {
+
+        for (int i = 0; i < string.length(); i++) {
+            if(Character.isLetter(string.charAt(i)) || Character.isWhitespace(string.charAt(i))) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static Boolean isThatWord(String string) {
+        if (Constants.SPECIAL_CHARACTERS.indexOf(string.trim()) > -1) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean isPeriod(String text) {
+        String[] parts = text.split(" ");
+        if(parts.length > 1 && Utils.isStringContainingOnlyDigits(parts[0]) && Utils.isOnTheList(parts[parts.length - 1],Constants.PERIOD)) {
+            return true;
+        }
+        return false;
+    }
 }

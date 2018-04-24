@@ -1,28 +1,29 @@
 package pl.edu.pwr;
 
 import pl.edu.pwr.contractsummary.Contract;
+import pl.edu.pwr.utils.SummaryXML;
 import pl.edu.pwr.utils.Utils;
-import pl.edu.pwr.contractsummary.Text;
+import pl.edu.pwr.contractsummary.segmentation.Text;
 
 import javax.xml.transform.TransformerException;
 import java.util.Scanner;
 
-import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Text;
-
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws TransformerException {
 
-     String filepath;
-     Scanner S = new Scanner (System.in);
-     System.out.println("Podaj ścieżkę to pliku txt z umową: ");
-     filepath = S.nextLine();
-     String toString = Utils.readFile(filepath);
-     Contract contract =  new Contract(new Text(toString));
-     try {
-            contract.writeXMLtoFile();
-        } catch (TransformerException e) {
-            e.printStackTrace();
-        }
+        System.out.println("Podaj ścieżkę to pliku txt z umową: ");
+        String filepath =  new Scanner (System.in).nextLine();
+        String string = Utils.readFile(filepath);
+
+        run(string).writeXMLtoFile();
+
+    }
+
+    private static SummaryXML run(String string) {
+
+        Contract contract =  new Contract(new Text(string));
+        return new SummaryXML(contract.getHeadersValues(), contract.getGeneralValues(), contract.getDetailsValues(), contract.getDetailsHeaders());
+
     }
 }
