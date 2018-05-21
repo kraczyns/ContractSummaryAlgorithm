@@ -9,6 +9,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import static pl.edu.pwr.utils.Constants.*;
+
 public class Utils {
 
     public static String readFile(String filename) {
@@ -104,7 +106,7 @@ public class Utils {
     public static Boolean isFirstNameLastName(String string) {
         String[] parts = string.split(" ");
         if(parts.length == 2) {
-            if (isOnTheList(parts[0], Constants.FIRSTNAMES)) {
+            if (isOnTheList(parts[0], FIRSTNAMES)) {
                 return true;
             }
         }
@@ -120,10 +122,17 @@ public class Utils {
     }
 
     public static Boolean isAddress(String string) {
-        String[] parts = string.split("\\.");
-        for (String address : Constants.ADDRESS) {
-            if (Utils.areStringsSame(address, parts[0])) {
-                return true;
+        String[] parts;
+        if (string.contains(".")) {
+            parts = string.split("\\.");
+        } else {
+             parts = string.split(" ");
+        }
+        if (parts.length > 0) {
+            for (String address : ADDRESS) {
+                if (Utils.areStringsSame(address, parts[0])) {
+                    return true;
+                }
             }
         }
         return false;
@@ -131,7 +140,7 @@ public class Utils {
 
     public static Boolean isCity(String string) {
         if(string.split(" ").length == 1) {
-            for (String city : Constants.CITIES) {
+            for (String city : CITIES) {
                 if (Utils.areStringsSame(city, string)) {
                     return true;
                 }
@@ -174,7 +183,7 @@ public class Utils {
     }
 
     public static Boolean isThatWord(String string) {
-        if (Constants.SPECIAL_CHARACTERS.indexOf(string.trim()) > -1) {
+        if (SPECIAL_CHARACTERS.indexOf(string.trim()) > -1) {
             return false;
         }
         return true;
@@ -182,9 +191,11 @@ public class Utils {
 
     public static boolean isPeriod(String text) {
         String[] parts = text.split(" ");
-        if(parts.length > 1 && Utils.isStringContainingOnlyDigits(parts[0]) && Utils.isOnTheList(parts[parts.length - 1],Constants.PERIOD)) {
+        if(parts.length > 1 && Utils.isStringContainingOnlyDigits(parts[0]) && Utils.isOnTheList(parts[parts.length - 1], PERIOD)) {
             return true;
         }
         return false;
     }
+
+
 }

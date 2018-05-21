@@ -4,9 +4,10 @@ import pl.edu.pwr.contractsummary.segmentation.Word;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
-public class Period implements ITags {
+public class Period implements ITextTag {
 
     String value = null;
+    Boolean wrongAssumption = false;
 
     @Override
     public Boolean isPotential(String content, char sign, Boolean... isFirst) {
@@ -21,10 +22,17 @@ public class Period implements ITags {
     }
 
     @Override
-    public Boolean isEnd(String content) {
+    public Boolean isEnd(String content, char sign) {
         String[] parts = content.split(" ");
-        if (Utils.isOnTheList(Word.useMorfologik(parts[parts.length - 1]), Constants.PERIOD)) {
+        if (parts.length == 2) {
+            if (Utils.isOnTheList(Word.useMorfologik(parts[parts.length - 1]), Constants.PERIOD) || Utils.areStringsSame("m²", parts[parts.length -1])) {
+                value = content;
                 return true;
+            } else {
+                wrongAssumption = true;
+                value = content;
+                return true;
+            }
         }
         return false;
     }
@@ -37,5 +45,10 @@ public class Period implements ITags {
     @Override
     public void clear() {
         value = null;
+    }
+
+    @Override
+    public Boolean back() {
+        return wrongAssumption;
     }
 }

@@ -40,7 +40,8 @@ public class WordTest {
                 {"Polinvest", Tag.otherName},
                 {"Pracodawca", Tag.text},
                 {"kot", Tag.text},
-                {"3 dniowy", Tag.period}
+                {"3 dniowy", Tag.period},
+                {"Company", Tag.otherName}
         });
     }
 

@@ -1,10 +1,7 @@
 package pl.edu.pwr.contractsummary.segmentation;
 
 import pl.edu.pwr.contractsummary.Header;
-import pl.edu.pwr.contractsummary.segmentation.tags.Address;
-import pl.edu.pwr.contractsummary.segmentation.tags.Name;
-import pl.edu.pwr.contractsummary.segmentation.tags.Period;
-import pl.edu.pwr.contractsummary.segmentation.tags.Prize;
+import pl.edu.pwr.contractsummary.segmentation.tags.*;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
@@ -106,60 +103,51 @@ public class Text {
         return false;
     }
 
-    private String arrayToString(String[] array) {
-        String returnString = "";
-        for (String string : array) {
-            returnString += string + " ";
-        }
-        return returnString;
-    }
-
     public void wordsSegmentation(Sentence sentence) {
 
-        Boolean PCM, noDoubleCheck;
-
-            int begin = 0;
-            PCM = noDoubleCheck = false;
-            Address address = new Address();
-            Name name = new Name();
-            Period period = new Period();
-            Prize prize = new Prize();
+        Boolean PCM = false;
+        int begin = 0;
+        ITextTag textTag = null;
+        TextTagImpl textTagImpl = new TextTagImpl();
 
             for (int i = 0; i < sentence.content.length(); i++) {
                 char sign = sentence.content.charAt(i);
                 if (PCM) {
                     String content = sentence.content.substring(begin, i);
-                    if (noDoubleCheck ||
-                            name.isPotential(content, sign, sentence.getWords().isEmpty()) ||
-                            period.isPotential(content, sign) ||
-                            prize.isPotential(content, sign) ||
-                            address.isPotential(content, sign)) {
-                        noDoubleCheck = true;
-                        if(name.isValid() && name.isEnd(Character.toString(sign)) ||
-                                period.isValid() && period.isEnd(content) ||
-                                prize.isValid() && prize.isEnd(content) ||
-                                address.isValid() && address.isEnd(content)) {
-                                name.clear();
-                                period.clear();
-                                prize.clear();
-                                address.clear();
-                                noDoubleCheck = false;
-                                sentence.addWord(content);
-                                begin = i;
-
-                        }
-                    } else {
+                    textTag = textTagImpl.getTag(content, sign, sentence.getWords().isEmpty());
+                    if (null == textTag) {
                         sentence.addWord(content.toLowerCase());
                         begin = i;
+                    } else if (textTag.isEnd(content, sign)){
+                            if (textTag.back()) {
+                                String[] parts = content.split(" ");
+                                for (String part : parts) {
+                                    sentence.addWord(part.toLowerCase());
+                                }
+                            } else {
+                                sentence.addWord(textTag.getValue());
+                            }
+                            begin = i;
+                            textTagImpl.clear();
+                            textTag.clear();
                     }
                     PCM = false;
                 }
-                if (sign == ' ') {
+                if (Character.isWhitespace(sign)) {
                     PCM = true;
                 }
             }
-                String content = sentence.content.substring(begin, sentence.content.length() - 1).trim();
-                sentence.addWord(content);
+            if (sentence.content.length() > 0) {
+                String content = sentence.content.substring(begin, sentence.content.length() - 1);
+                if (null != textTag && textTag.isEnd(content, ' ') && textTag.back()) {
+                    String[] parts = content.split(" ");
+                    for (String part : parts) {
+                        sentence.addWord(part.toLowerCase());
+                    }
+                } else {
+                    sentence.addWord(content);
+                }
+            }
     }
 
     public void sentencesSegmentation() {
@@ -174,7 +162,7 @@ public class Text {
                 if (PCM) {
                     if (isCM(sign)) {
                         String content = text.substring(begin, i);
-                        if (isCMshortcut(content, sign)) {
+                        if (!isCMDate(content, sign) && isCMshortcut(content, sign)) {
                             sentences.add(new Sentence(content.trim()));
                             begin = i;
                         }
@@ -197,6 +185,16 @@ public class Text {
         }
     }
 
+    private boolean isCMDate(String content, char sign) {
+        String[] parts = content.split(" ");
+        if (parts.length > 0) {
+            if (Utils.isStringContainingOnlyDigits(parts[parts.length - 1].replaceAll("\\.",""))) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private Boolean isPCM(char sign) {
         //znaki, które mogą kończyć zdanie
         if (sign == '.' || sign == '?' || sign == '!') {
@@ -211,16 +209,17 @@ public class Text {
         if (sign == ',' || sign == '.') {
             return false;
         }
+        if (sign == '§') {
+            return true;
+        }
         if (Character.isDigit(sign)) {
-            return false;
+            return true;
         }
         if (!Utils.isUpperCase(sign)) {
             return false;
         }
         return true;
     }
-
-
 
     private Boolean isCMshortcut(String content, char sign) {
         char lastSign = content.charAt(content.length() - 2);
@@ -237,8 +236,5 @@ public class Text {
 
         return true;
     }
-
-
-
 
 }

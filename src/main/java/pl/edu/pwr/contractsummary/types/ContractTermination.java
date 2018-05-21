@@ -5,6 +5,7 @@ import pl.edu.pwr.contractsummary.segmentation.Sentence;
 import pl.edu.pwr.contractsummary.segmentation.Tag;
 import pl.edu.pwr.contractsummary.segmentation.Text;
 import pl.edu.pwr.contractsummary.segmentation.Word;
+import pl.edu.pwr.contractsummary.segmentation.tags.Date;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
@@ -20,7 +21,7 @@ public class ContractTermination implements IContractTypes {
         previousContractDate = findPreviousContractDate(datePlaceSentence);
         previousContractPlace = findPreviousContractPlace(datePlaceSentence);
         Sentence effectDateSentence = sentenceWithInfo(text, addToStringArray(null,"okres", "termin", "zachować", "proponować"));
-        contractEffectDate = findContractEffectDate(effectDateSentence);
+        contractEffectDate = findContractEffectDate(effectDateSentence, text.getHeader().extractDate());
         requestingParty = findRequestingParty(text);
     }
 
@@ -64,37 +65,43 @@ public class ContractTermination implements IContractTypes {
         return "";
     }
 
-    private String findContractEffectDate(Sentence sentence) {
+    private String findContractEffectDate(Sentence sentence, String date) {
         // CZAS WYPOWIEDZENIA
-        for (Word word : sentence.getWords()) {
-            if (word.getTag() == Tag.date || word.getTag() == Tag.period) {
-                return word.getContent();
+        if (null != sentence) {
+            for (Word word : sentence.getWords()) {
+                if (word.getTag() == Tag.date) {
+                    return word.getContent();
+                } else if (word.getTag() == Tag.period) {
+                    Date dateobj = new Date(date);
+                    return dateobj.addPeriodToDate(word.getContent());
+                }
             }
         }
-
         return "";
 
     }
 
     private String findPreviousContractPlace(Sentence sentence) {
 
-        for (Word word : sentence.getWords()) {
-            if (word.getTag() == Tag.city) {
-                return word.getContent();
+        if (null != sentence) {
+            for (Word word : sentence.getWords()) {
+                if (word.getTag() == Tag.city) {
+                    return word.getContent();
+                }
             }
         }
-
         return "";
     }
 
     private String findPreviousContractDate(Sentence sentence) {
 
+        if (null != sentence) {
             for (Word word : sentence.getWords()) {
                 if (word.getTag() == Tag.date) {
                     return word.getContent();
                 }
             }
-
+        }
         return "";
     }
 

@@ -2,6 +2,92 @@ package pl.edu.pwr.utils;
 
 public class Constants {
 
+    public static final String[] SIDE_HEADERS_COMPANY = {
+    "COMPANY",
+    "NAME",
+    "ADDRESS",
+    "CITY",
+    "REGON",
+    "NIP",
+    "REPRESENTATIVE",
+            "ROLE"
+    };
+
+    public static final String[] SIDE_HEADERS_NONCOMPANY = {
+            "COMPANY",
+            "NAME",
+            "ADDRESS",
+            "CITY",
+            "PESEL",
+            "ID",
+            "ROLE"
+    };
+
+    public static final String[] RENT = {
+            "czynsz"
+    };
+
+    public static final String[] ROOMS = {
+            "pokój",
+            "pokoje"
+    };
+
+    public static final String[] PENALTY = {
+            "kara"
+    };
+
+    public static final String[] SALARY = {
+            "wynagrodzenie"
+    };
+
+    public static final String[] LEASE_AGREEMENT_HEADERS = {
+            "LEASE_SUBJECT",
+            "NUMBER_OF_ROOMS",
+            "LEASE_SUBJECT_ADDRESS",
+            "CONTRACT_PERIOD",
+            "DEFINED_PERIOD",
+            "RENT",
+            "DENUNCIATION_TIME",
+            "DEPOSIT"
+    };
+    public static final String[] CONTRACT_OF_MANDATE_DETAILS = {
+            "DESCRIPTION",
+            "START_DATE",
+            "END_DATE",
+            "SALARY"
+    };
+
+    public static final String[] CONTRACT_WORK_DETAILS = {
+            "DESCRIPTION",
+            "DEADLINE",
+            "START_DATE",
+            "SALARY",
+            "DELAY_PENALTY"
+    };
+    public static final String[] CONTRACT_WORK_DESC = {
+            "zamawiający",
+            "zamawiać",
+            "przyjmujący",
+            "zobowiązywać",
+            "przyjmować"
+    };
+
+    //liczby porządkowe zaczynające część zdania
+    public static String[] ORDINAL_NUMBERS = {
+            "1.",
+            "2.",
+            "3.",
+            "4.",
+            "5.",
+            "6.",
+            "7.",
+            "8.",
+            "9."
+    };
+
+    public static String[] PLACE_DEFINITION = {
+            "lokal"
+    };
     //skróty, które nie mogą być na końcu zdania, ale często mają po sobie dużą literę
     public static String[] SHORTCUTS_NOT_ENDING_SENTENCE = {
             "1.",
@@ -291,7 +377,8 @@ public class Constants {
             "Halina",
             "Dariusz",
             "Irena",
-            "Mariusz"
+            "Mariusz",
+            "Artur"
     };
 
     public static String[] ADDRESS = {
@@ -303,6 +390,19 @@ public class Constants {
         "plac"
     };
 
+    public static String[] PLACE = {
+            "lokal",
+            "mieszkanie",
+            "położyć"
+    };
+
+    public static String[] CONTRACT_OF_MANDATE_DESC = {
+            "zleceniodawca",
+            "zleceniobiorca",
+            "zlecać",
+            "przyjmować"
+    };
+
     public static String[] CONTRACT = { "umowa", "umowy" };
 
     public static String EMPLOYMENT_CONTRACT = "praca";
@@ -312,7 +412,7 @@ public class Constants {
     public static String CONTRACT_WORK = "dzieło";
 
     public static String[] LEASE_AGREEMENT = {
-            "najm",
+            "najem",
             "dzierżawa",
             "leasing"
     };
@@ -321,7 +421,16 @@ public class Constants {
             "pan",
             "pani",
             "pracodawca",
-            "pracownik"
+            "pracownik",
+            "najemca",
+            "wynajmujący",
+            "wynajmująca",
+            "zamawiający",
+            "wykonawca",
+            "zleceniodawca",
+            "zleceniobiorca",
+            "zawarty",
+            "zawarta"
     };
 
     public static String SPECIAL_CHARACTERS = "-—–";
@@ -330,13 +439,17 @@ public class Constants {
 
     public static String DEFINITE_PERIOD = "określony";
 
+    public static String[] DEFINITE_PERIOD_LIST = { "określony", "oznaczony" };
+
+    public static String[] INDEFINITE_PERIOD_LIST = { "nieokreślony", "nieoznaczony"};
+
     public static String PROBATIONARY_PERIOD = "próbny";
 
     public static String POSITION = "stanowisko";
 
     public static String[] WORKING_PLACE = {"wykonywać", "miejsce", "siedziba"};
 
-    public static String[] START_DATE = {"począć", "rozpoczęcie", "dzień"};
+    public static String[] START_DATE = {"począć", "rozpoczęcie", "rozpocząć", "zobowiązywać"};
 
     public static String BRUTTO = "brutto";
 
@@ -368,8 +481,7 @@ public class Constants {
 
     public static String[] CONTRACT_GENERAL = {
             "TYPE",
-            "FIRST_SIDE",
-            "SECOND_SIDE",
+            "SIDES",
             "CONCLUSION_PLACE",
             "CONCLUSION_DATE",
     };
@@ -378,6 +490,11 @@ public class Constants {
             "wypowiedzenie",
             "rozwiązanie",
             "zerwanie"
+    };
+
+    public static String[] DEPOSIT = {
+      "depozyt",
+      "kaucja"
     };
 
     public static String[] PERIOD = {

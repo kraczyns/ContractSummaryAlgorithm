@@ -43,7 +43,7 @@ public class EmploymentContractTest {
         "\n" +
         "4.\tInne warunki umowy:\n" +
         "W czasie trwania umowy Pracownik ma prawo korzystać ze służbowego samochodu, a także otrzymuje do dyspozycji telefon komórkowy.\n", ContractPeriod.indefinitePeriod, "", HourlyDimension.fulltime,
-                1, "administrator", "ul. Dworcowy 10", "10.08.2018", "", "2 852 złoty"}
+                1, "administrator", "ul. Dworcowy 10", "10.08.2018", "", "2852 złoty"}
         });
     }
 

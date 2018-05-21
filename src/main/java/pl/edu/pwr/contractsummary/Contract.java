@@ -4,8 +4,7 @@ import pl.edu.pwr.contractsummary.segmentation.Sentence;
 import pl.edu.pwr.contractsummary.segmentation.Tag;
 import pl.edu.pwr.contractsummary.segmentation.Text;
 import pl.edu.pwr.contractsummary.segmentation.Word;
-import pl.edu.pwr.contractsummary.types.ContractTermination;
-import pl.edu.pwr.contractsummary.types.EmploymentContract;
+import pl.edu.pwr.contractsummary.types.*;
 import pl.edu.pwr.utils.Constants;
 import pl.edu.pwr.utils.Utils;
 
@@ -18,7 +17,7 @@ public class Contract {
     private ContractType contractType;
     private String conclusionDate;
     private String conclusionPlace;
-    private List<String> sides;
+    private List<Side> sides;
     private Text text;
 
     public void setText(Text text) {
@@ -36,12 +35,12 @@ public class Contract {
         findConclusionPlace(sentence);
     }
 
-    private ArrayList<String> initializeArray() {
-        List<String> sides = new ArrayList<String>();
+    private ArrayList<Side> initializeArray() {
+        List<Side> sides = new ArrayList<Side>();
         for (int i = 0; i < 2; i++) {
-            sides.add("");
+            sides.add(null);
         }
-        return (ArrayList<String>)sides;
+        return (ArrayList<Side>)sides;
     }
 
     public String[] getHeadersValues() {
@@ -49,15 +48,28 @@ public class Contract {
     }
 
     public String[] getGeneralValues() {
-        return new String[] {contractType.toString(), null != this.sides ? this.sides.get(0) : "", this.sides.size() == 2 ? this.sides.get(1) : "",
+        return new String[] {contractType.toString(), "",
                 conclusionPlace, conclusionDate};
     }
 
+    public String[][] getSideValues() { return new String[][] {sides.get(0).getContractTypeFields(), sides.get(1).getContractTypeFields()};}
+
+    public String[][] getSideHeaders() { return new String[][] {sides.get(0).getDetailsHeaders(), sides.get(1).getDetailsHeaders()};}
+
     public String[] getDetailsValues() {
-        return iContractType.getContractTypeFields();
+        if (null != iContractType) {
+            return iContractType.getContractTypeFields();
+        } else {
+            return new String[]{""};
+        }
     }
 
-    public String[] getDetailsHeaders() { return iContractType.getDetailsHeaders(); }
+    public String[] getDetailsHeaders() {
+        if (null != iContractType) {
+        return iContractType.getDetailsHeaders();
+    } else {
+        return new String[]{"null"};
+    } }
 
     public Text getText() { return text; }
 
@@ -73,7 +85,7 @@ public class Contract {
         return conclusionPlace;
     }
 
-    public List<String> getSides() {
+    public List<Side> getSides() {
         return sides;
     }
 
@@ -100,6 +112,7 @@ public class Contract {
                         iContractType = new ContractTermination(text);
                     } else {
                         contractType = ContractType.contractOfMandate;
+                        iContractType = new ContractOfMandate(text);
                     }
                     break;
                 } else if (Utils.areStringsSame(word.getContent(), Constants.CONTRACT_WORK)) {
@@ -108,6 +121,7 @@ public class Contract {
                         iContractType = new ContractTermination(text);
                     } else {
                         contractType = ContractType.contractWork;
+                        iContractType = new ContractWork(text);
                     }
                     break;
                 } else if (Utils.isOnTheList(word.getContent(), Constants.LEASE_AGREEMENT)){
@@ -116,6 +130,7 @@ public class Contract {
                                 iContractType = new ContractTermination(text);
                             } else {
                                 contractType = ContractType.leaseAgreement;
+                                iContractType = new LeasingContract(text);
                             }
                             break;
                 }
@@ -129,31 +144,12 @@ public class Contract {
     }
 
     private void findContractSides(Sentence sentence) {
-        int side = 0;
-        if (null != sentence) {
-            for (Word word : sentence.getWords()) {
-                if (word.getTag() == Tag.firstNameLastName || word.getTag() == Tag.otherName) {
-                        sides.set(side, sides.get(side)  + word.getContent() + " ");
-                }
-                else if (word.getContent().equals("a")) {
-                    side++;
-                    if (side == 2) {
-                        break;
-                    }
-                } else if (word.getContent().equals("zwać")) {
-                    if (side == 1) {
-                        break;
-                    }
-                }
-            }
-            sides.set(0, sides.get(0).trim());
-            sides.set(1, sides.get(1).trim());
-
-        }
+            sides.set(0, Side.extractSides(sentence).get(0));
+            sides.set(1, Side.extractSides(sentence).get(1));
     }
 
     private void findConclusionDate(Sentence sentence) {
-        if (null != sentence && !contractType.toString().contains("zerwanie")) {
+         if (null != sentence && !contractType.toString().contains("zerwanie")) {
             for (Word word : sentence.getWords()) {
                 if (word.getTag() == Tag.date) {
                     conclusionDate = word.getContent();

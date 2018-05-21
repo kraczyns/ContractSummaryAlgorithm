@@ -18,12 +18,16 @@ public class SummaryXML {
     private Document document;
     private String[] contractHeadersValues;
     private String[] contractGeneralValues;
+    private String[][] contractSidesValues;
+    private String[][] contractSidesHeaders;
     private String[] contractDetailsValues;
     private String[] contractDetailsHeaders;
 
-    public SummaryXML(String[] hValues, String[] gValues, String[] dValues, String[] dHeaders) {
+    public SummaryXML(String[] hValues, String[] gValues, String[][] sValues, String[][] sHeaders, String[] dValues, String[] dHeaders) {
         contractHeadersValues = hValues;
         contractGeneralValues = gValues;
+        contractSidesValues = sValues;
+        contractSidesHeaders = sHeaders;
         contractDetailsValues = dValues;
         contractDetailsHeaders = dHeaders;
     }
@@ -52,6 +56,22 @@ public class SummaryXML {
                 Element elem = document.createElement(Constants.CONTRACT_GENERAL[i]);
                 elem.appendChild(document.createTextNode(contractGeneralValues[i]));
                 general.appendChild(elem);
+                if (Constants.CONTRACT_GENERAL[i] == "SIDES") {
+                    Element side1 = document.createElement("FIRST_SIDE");
+                    elem.appendChild(side1);
+                    for (int j = 0; j < contractSidesHeaders[0].length; j++) {
+                        Element element = document.createElement(contractSidesHeaders[0][j]);
+                        element.appendChild(document.createTextNode(contractSidesValues[0][j]));
+                        side1.appendChild(element);
+                    }
+                    Element side2 = document.createElement("SECOND_SIDE");
+                    elem.appendChild(side2);
+                    for (int j = 0; j < contractSidesHeaders[1].length; j++) {
+                        Element element = document.createElement(contractSidesHeaders[1][j]);
+                        element.appendChild(document.createTextNode(contractSidesValues[1][j]));
+                        side2.appendChild(element);
+                    }
+                }
             }
 
             Element details = document.createElement("DETAILS");
@@ -67,13 +87,13 @@ public class SummaryXML {
         }
     }
 
-    public void writeXMLtoFile() throws TransformerException {
+    public void writeXMLtoFile(String dir, int number) throws TransformerException {
         createContractSumarizationXML();
         DOMSource source = new DOMSource(document);
-        StreamResult result = new StreamResult(new File("/Users/nieop/Desktop/mgr/xml/summary.xml"));
+        StreamResult result = new StreamResult(new File("/Users/nieop/Desktop/mgr/xml/" + dir + "/umowa-" + number + ".xml"));
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         transformer.transform(source, result);
-        System.out.println("File saved!");
+        System.out.println("umowa-" + number + " zapisana w folderze: " + dir);
     }
 }

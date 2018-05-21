@@ -28,24 +28,40 @@ public class Header {
 
     public String extractDate() {
         String[] pd = placeDate.replaceAll(",","").split(" ");
-        Word first = new Word(pd[0]);
-        Word second = new Word(pd[1]);
-        if (first.getTag() == Tag.date) {
-            return first.getContent();
-        } else {
-            return second.getContent();
-        }
+       if (pd.length == 2) {
+           Word first = new Word(pd[0]);
+           Word second = new Word(pd[1]);
+           if (first.getTag() == Tag.date) {
+               return first.getContent();
+           } else {
+               return second.getContent();
+           }
+       } else if (pd.length == 1) {
+           Word word = new Word(pd[0]);
+           if (word.getTag() == Tag.date) {
+               return word.getContent();
+           }
+       }
+       return "";
     }
 
 
     public String extractPlace() {
         String[] pd = placeDate.replaceAll(",","").split(" ");
-        Word first = new Word(pd[0]);
-        Word second = new Word(pd[1]);
-        if (first.getTag() == Tag.city) {
-            return first.getContent();
-        } else {
-            return second.getContent();
+        if (pd.length == 2) {
+            Word first = new Word(pd[0]);
+            Word second = new Word(pd[1]);
+            if (first.getTag() == Tag.city) {
+                return first.getContent();
+            } else {
+                return second.getContent();
+            }
+        } else if (pd.length == 1) {
+            Word word = new Word(pd[0]);
+            if (word.getTag() == Tag.city) {
+                return word.getContent();
+            }
         }
+        return "";
     }
 }

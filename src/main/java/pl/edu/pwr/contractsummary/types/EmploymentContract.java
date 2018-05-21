@@ -90,16 +90,11 @@ public class EmploymentContract implements IContractTypes{
     }
 
     private String findStartDate(Text text) {
-        int potentialStarDatePart = 0;
-        if (null != text.getSentences()) {
-            for (Sentence sentence : text.getSentences()) {
-                for (Word word : sentence.getWords()) {
-                    if (potentialStarDatePart > 1 && Utils.isDate(word.getContent())) {
+        Sentence sentence = Sentence.findSentence(text.getSentences(), Constants.START_DATE);
+        if (null != sentence) {
+            for (Word word : sentence.getWords()) {
+                if (Utils.isDate(word.getContent())) {
                         return word.getContent();
-                    }
-                    if (Utils.isOnTheList(word.getContent(), Constants.START_DATE)) {
-                        potentialStarDatePart++;
-                    }
                 }
             }
         }

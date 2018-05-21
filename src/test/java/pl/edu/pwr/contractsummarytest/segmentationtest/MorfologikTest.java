@@ -31,7 +31,7 @@ public class MorfologikTest {
                 {"ulicy", "ulica"},
                 {"Adamem Nowakiem", "Adam Nowak"},
                 {"umowa o pracę", "umowa o praca"},
-                {"Pracodawcą", "Pracodawca"},
+                {"Pracodawcą", "pracodawca"},
                 {"Analfabetą", "Analfabeta"},
                 {"począwszy", "począć"},
                 {"rozpoczęcia", "rozpoczęcie"}
