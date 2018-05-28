@@ -34,7 +34,9 @@ public class MorfologikTest {
                 {"Pracodawcą", "pracodawca"},
                 {"Analfabetą", "Analfabeta"},
                 {"począwszy", "począć"},
-                {"rozpoczęcia", "rozpoczęcie"}
+                {"rozpoczęcia", "rozpoczęcie"},
+                {"karę", "kara"},
+                {"postaci", "postać"}
 });
     }
     @Test

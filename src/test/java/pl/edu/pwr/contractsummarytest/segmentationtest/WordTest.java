@@ -41,7 +41,8 @@ public class WordTest {
                 {"Pracodawca", Tag.text},
                 {"kot", Tag.text},
                 {"3 dniowy", Tag.period},
-                {"Company", Tag.otherName}
+                {"Company", Tag.otherName},
+                {"20 zł", Tag.prize}
         });
     }
 

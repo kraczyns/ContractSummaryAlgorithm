@@ -128,7 +128,7 @@ public class ContractTermination implements IContractTypes {
     }
 
     @Override
-    public String[] getDetailsHeaders() {
-        return Constants.TERMINATION_CONTRACT_HEADERS;
+    public String[] getDetailsHeaders(String language) {
+        return language.equals("ENG") ? Constants.TERMINATION_CONTRACT_HEADERS_ENG : Constants.TERMINATION_CONTRACT_HEADERS_PL;
     }
 }

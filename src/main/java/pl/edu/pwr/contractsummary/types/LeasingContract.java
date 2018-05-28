@@ -32,6 +32,12 @@ public class LeasingContract implements IContractTypes {
         findRent(findSentence(chosenSentences, Constants.RENT));
         findDenunciationTime(findSentence(chosenSentences, Constants.DENUNCIATION));
         findDeposit(findSentence(chosenSentences, Constants.DEPOSIT));
+        if (getNumberOfRooms() == 0) {
+            findNumberOfRooms(findSentence(text.getSentences(), Constants.ROOMS));
+        }
+        if (getLeaseSubjectAddress() == "") {
+            findLeaseSubjectAddress(findSentence(text.getSentences(), Constants.PLACE));
+        }
     }
 
     private Sentence findSentence(List<Sentence> sentences, String[] words) {
@@ -155,8 +161,8 @@ public class LeasingContract implements IContractTypes {
     }
 
     @Override
-    public String[] getDetailsHeaders() {
-        return Constants.LEASE_AGREEMENT_HEADERS;
+    public String[] getDetailsHeaders(String language) {
+        return language.equals("ENG") ? Constants.LEASE_AGREEMENT_HEADERS_ENG : Constants.LEASE_AGREEMENT_HEADERS_PL;
     }
 
     public String getLeaseSubject() {

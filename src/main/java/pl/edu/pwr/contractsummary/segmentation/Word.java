@@ -26,14 +26,13 @@ public class Word {
         morfologik(deleteUnnecessarySigns(c));
         this.tag = selectTag();
         if (!tag.equals(Tag.address) && !tag.equals(Tag.date)) {
-            content = content.replaceAll("\\.", "");
+            content = content.replaceAll("\\.|:", "");
         }
-
     }
 
     private String deleteUnnecessarySigns(String string) {
-        return string.trim().replaceAll(",", "").replaceAll(":", "").replaceAll("\\(", "")
-                .replaceAll("\\)", "");
+        return string.trim().replaceAll(",", "").replaceAll("\\(", "")
+                .replaceAll("\\)", "").replaceAll("\"|„|”", "").replaceAll("\\*","");
     }
 
     public void morfologik(String string) {
@@ -61,9 +60,17 @@ public class Word {
                     } else {
                         stringAfter += morfologik[0] + " ";
                     }
-
                 }
             }
+        if (Utils.isAddress(stringAfter) && stringAfter.contains("ul")) {
+            String[] addressParts = stringAfter.split(" ");
+            if (addressParts.length > 1) {
+                if (addressParts[1].charAt(addressParts[1].length() - 1) == 'y') {
+                    String sub = addressParts[1].substring(0, addressParts[1].length() - 1);
+                    stringAfter = addressParts[0] + " " + sub + "a " + addressParts[2];
+                }
+            }
+        }
         this.content = stringAfter.trim();
     }
 
@@ -109,6 +116,11 @@ public class Word {
             } else if (Utils.isOrdinalNumber(text)){
                 return Tag.ordinalNumber;
             }
+        } else if(text.contains(":") && (Utils.areStringsSame(text.replaceAll(":",""),"na") || Utils.areStringsSame(text.replaceAll(":",""),"postać") ||
+                Utils.areStringsSame(text.replaceAll(":",""),"postaci"))) {
+            return Tag.descMark;
+        } else if (Utils.isID(text)) {
+            return Tag.id;
         } else if (Utils.isPrize(text)) {
             return Tag.prize;
         }

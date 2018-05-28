@@ -16,7 +16,9 @@ public class Main {
 
         String[] dirs = new String[] {"dzieło", "najem", "praca", "rozwiązanie", "zlecenie"};
         List<Long> elapsedTimes = new ArrayList<Long>();
+        List<Integer> lengths = new ArrayList<Integer>();
         String string = "";
+        String tmp = "c(";
         for (String dir : dirs) {
             for (int i = 1; i < 6; i++) {
                 String filepath = "C:/Users/nieop/Desktop/mgr/umowy-txt/umowa-" + dir + "/umowa-" + i + ".txt";
@@ -26,19 +28,32 @@ public class Main {
                 run(string).writeXMLtoFile("umowa-" + dir, i);
                 long elapsedTime = System.nanoTime() - start;
                 elapsedTimes.add(elapsedTime);
+                lengths.add(string.length());
             }
         }
 
         System.out.println("Algorithm duration:");
         for (Long elem : elapsedTimes) {
-            System.out.println(elem);
+            tmp += elem + ", ";
         }
+        String betterTmp = tmp.substring(0, tmp.length() - 2);
+        betterTmp += ")";
+        System.out.println(betterTmp);
+        tmp = "c(";
+        betterTmp = "";
+        System.out.println("Contract length:");
+        for (int elem : lengths) {
+            tmp += elem + ", ";
+        }
+        betterTmp = tmp.substring(0, tmp.length() - 2);
+        betterTmp += ")";
+        System.out.println(betterTmp);
     }
 
     private static SummaryXML run(String string) {
-
+        String language = "PL";
         Contract contract =  new Contract(new Text(string));
-        return new SummaryXML(contract.getHeadersValues(), contract.getGeneralValues(), contract.getSideValues(), contract.getSideHeaders(), contract.getDetailsValues(), contract.getDetailsHeaders());
+        return new SummaryXML(contract.getHeadersValues(), contract.getGeneralValues(), contract.getSideValues(), contract.getSideHeaders(language), contract.getDetailsValues(), contract.getDetailsHeaders(language));
 
     }
 }

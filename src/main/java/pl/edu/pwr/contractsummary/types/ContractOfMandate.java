@@ -42,17 +42,6 @@ public class ContractOfMandate implements IContractTypes {
         findSalary(text);
     }
 
-    private Sentence findSentence(Text text, String[] words) {
-        for (Sentence sentence : text.getSentences()) {
-            for (Word word : sentence.getWords()) {
-                if (Utils.isOnTheList(word.getContent(), words)) {
-                    return sentence;
-                }
-            }
-        }
-        return null;
-    }
-
     private Sentence findSentenceWithCounter(List<Sentence> sentences, String[] words, int max) {
         for (Sentence sentence : sentences) {
             int counter = 0;
@@ -69,7 +58,7 @@ public class ContractOfMandate implements IContractTypes {
     }
 
     private void findSalary(Text text) {
-        Sentence sentence = findSentence(text, Constants.SALARY);
+        Sentence sentence = Sentence.findSentence(text, Constants.SALARY, Tag.prize);
 
         if (null != sentence) {
             for (Word word : sentence.getWords()) {
@@ -84,8 +73,13 @@ public class ContractOfMandate implements IContractTypes {
 
     private void findStartEndDate(Text text) {
 
-        Sentence sentence = findSentence(text, Constants.START_DATE);
+        Sentence sentence = Sentence.findSentence(text, Constants.START_DATE, Tag.date);
         List<String> dates = new ArrayList<String>();
+        startDate = "";
+        endDate = "";
+        if (null == sentence) {
+            sentence = Sentence.findSentenceWithCounter(text.getSentences(), new String[] {"zobowiązywać", "termin", "dzień"}, 2);
+        }
         if (null != sentence) {
             for (Word word : sentence.getWords()) {
                 if (word.getTag() == Tag.date ) {
@@ -104,8 +98,30 @@ public class ContractOfMandate implements IContractTypes {
                 }
             }
         }
-        startDate = "";
-        endDate = "";
+        if (dates.size() != 2) {
+            if (dates.size() == 1) {
+                startDate = dates.get(0);
+                Sentence tryOneMoreTime = Sentence.findSentence(text, Constants.END_DATE, Tag.date);
+                if (null != tryOneMoreTime) {
+                    for (Word wordAgain : tryOneMoreTime.getWords()) {
+                        if (wordAgain.getTag() == Tag.date) {
+                            endDate = wordAgain.getContent();
+                            return;
+                        }
+                    }
+                }
+            } else {
+                Sentence tryOneMoreTime = Sentence.findSentence(text, Constants.END_DATE, Tag.date);
+                if (null != tryOneMoreTime) {
+                    for (Word wordAgain : tryOneMoreTime.getWords()) {
+                        if (wordAgain.getTag() == Tag.date) {
+                            endDate = wordAgain.getContent();
+                            return;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private void findDescription(Text text) {
@@ -118,7 +134,7 @@ public class ContractOfMandate implements IContractTypes {
                 for (String part : otherParts) {
                     Word word = new Word(part);
                     if (!(null != word.getMorfologikOutput() && word.getMorfologikOutput().contains("subst")) && description.split(" ").length == 3) {
-                        description = description.trim();
+                        description = description.trim().replaceAll("\\.|,","");
                         return;
                     }
                     if (!Utils.isStringContainingDigits(part.trim()) && part != "") {
@@ -137,7 +153,7 @@ public class ContractOfMandate implements IContractTypes {
     }
 
     @Override
-    public String[] getDetailsHeaders() {
-        return Constants.CONTRACT_OF_MANDATE_DETAILS;
+    public String[] getDetailsHeaders(String language) {
+        return language.equals("ENG") ? Constants.CONTRACT_OF_MANDATE_DETAILS_ENG : Constants.CONTRACT_OF_MANDATE_DETAILS_PL;
     }
 }

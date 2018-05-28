@@ -8,5 +8,5 @@ public enum Tag {
     firstNameLastName,
     otherName,
     ordinalNumber,
-    period, text
+    period, id, descMark, text
 }

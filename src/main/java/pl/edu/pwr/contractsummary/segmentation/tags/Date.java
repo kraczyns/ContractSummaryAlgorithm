@@ -1,16 +1,36 @@
 package pl.edu.pwr.contractsummary.segmentation.tags;
 
-public class Date {
+import pl.edu.pwr.utils.Constants;
+import pl.edu.pwr.utils.Utils;
+
+public class Date{
 
     private int day;
     private int month;
     private int year;
+
+    public Date()
+    {
+
+    }
 
     public Date(String date) {
         String[] dateParts = date.split("\\.");
         day = Integer.parseInt(dateParts[0]);
         month = Integer.parseInt(dateParts[1]);
         year = Integer.parseInt(dateParts[2]);
+    }
+
+    public String stringToDate(String string) {
+        String[] parts = string.split(" ");
+        if (parts.length == 3) {
+            for (int i = 0; i < Constants.MONTHS.length; i++) {
+                if (Utils.areStringsSame(parts[1], Constants.MONTHS[i])) {
+                    return dateToString(Integer.parseInt(parts[0]), i+1, Integer.parseInt(parts[2]));
+                }
+            }
+        }
+        return string;
     }
 
     private String dateToString(int d, int m, int y) {

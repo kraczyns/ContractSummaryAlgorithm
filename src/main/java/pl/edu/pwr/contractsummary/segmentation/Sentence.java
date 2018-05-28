@@ -16,6 +16,20 @@ public class Sentence {
         this.content = clear(content);
     }
 
+    public static Sentence findSentence(Text text, String[] words, Tag type) {
+        for (Sentence sentence : text.getSentences()) {
+            for (Word word : sentence.getWords()) {
+                if (Utils.isOnTheList(word.getContent(), words)) {
+                    for (Word part : sentence.getWords()) {
+                        if (part.getTag() == type) {
+                            return sentence;
+                        }
+                    }
+                }
+            }
+        }
+        return null;
+    }
     public static Sentence findSentence(List<Sentence> sentences, String[] words) {
         for (Sentence sentence : sentences) {
             for (Word word : sentence.getWords()) {
@@ -54,7 +68,7 @@ public class Sentence {
            if (part.contains("§") && !Utils.isStringContainingDigits(part)) {
                thereWillBeNumber = true;
            }
-           if (thereWillBeNumber && Utils.isStringContainingOnlyDigits(part)) {
+           if (thereWillBeNumber && Utils.isStringContainingOnlyDigits(part.replaceAll("\\.",""))) {
                thereWillBeNumber = false;
            }
        }

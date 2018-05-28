@@ -167,7 +167,7 @@ public class EmploymentContract implements IContractTypes{
     }
 
     @Override
-    public String[] getDetailsHeaders() {
-        return Constants.EMPLOYMENT_CONTRACT_HEADERS;
+    public String[] getDetailsHeaders(String language) {
+        return language.equals("ENG") ? Constants.EMPLOYMENT_CONTRACT_HEADERS_ENG : Constants.EMPLOYMENT_CONTRACT_HEADERS_PL;
     }
 }

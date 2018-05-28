@@ -43,8 +43,12 @@ public class TextTagImpl implements ITextTag {
             Name name = new Name();
             Period period = new Period();
             Prize prize = new Prize();
-
-            if (address.isPotential(content, sign)) {
+            Id id = new Id();
+            if (id.isPotential(content, sign)) {
+                value = id;
+                return id;
+            }
+            else if (address.isPotential(content, sign)) {
                 value = address;
                 return address;
             } else if (name.isPotential(content, sign, isFirst)) {

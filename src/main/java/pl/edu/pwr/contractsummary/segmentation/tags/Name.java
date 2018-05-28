@@ -9,50 +9,47 @@ public class Name implements ITextTag {
     String value = null;
     Boolean wrongAssumption = false;
     Boolean citationStart = false;
-    Boolean citationEnd = false;
 
     @Override
     public Boolean isPotential(String content, char sign, Boolean... isFirst) {
-        if (Utils.isUpperCase(content.charAt(0)) && Utils.isUpperCase(sign)) {
-            if (isFirst[0]) {
-                String[] parts = content.split(" ");
-                if (Utils.isOnTheList(parts[0], Constants.FIRSTNAMES)) {
-                    value = content;
-                    return true;
+        if (content.length() != 0) {
+            if (Utils.isUpperCase(content.charAt(0)) && Utils.isUpperCase(sign)) {
+                if (isFirst[0]) {
+                    String[] parts = content.split(" ");
+                    if (Utils.isOnTheList(parts[0], Constants.FIRSTNAMES)) {
+                        value = content;
+                        return true;
+                    }
+                } else {
+                    if (Utils.isAllUpperCase(content) && Character.isUpperCase(sign)) {
+                        return false;
+                    } else if (!Utils.isOnTheList(Word.useMorfologik(content.trim().toLowerCase().replaceAll(",", "")), Constants.IGNORE_NAME)) {
+                        value = content;
+                        return true;
+                    }
                 }
-            }
-            else  {
-                if (!Utils.isOnTheList(Word.useMorfologik(content.trim().toLowerCase().replaceAll(",", "")), Constants.IGNORE_NAME)) {
-                    value = content;
-                    return true;
-                }
-            }
-        }
-        else if (Utils.isUpperCase(content.charAt(0)) && isFirst[0]) {
+            } else if (Utils.isUpperCase(content.charAt(0)) && isFirst[0]) {
                 if (Utils.isOnTheList(content.split(" ")[0], Constants.FIRSTNAMES)) {
                     value = content;
                     return true;
                 }
 
-        } else if (Utils.isUpperCase(content.charAt(0))) {
-            value = content;
-            return true;
+            } else if (Utils.isUpperCase(content.charAt(0))) {
+                value = content;
+                return true;
+            }
+            if ((content.contains("„") || content.contains("\"")) && Character.isUpperCase(content.charAt(1))) {
+                value = content;
+                citationStart = true;
+                return true;
+            }
         }
-        if (content.contains("„")) {
-            citationStart = true;
-        } if (content.contains("”")) {
-            citationEnd = true;
-        }
-
         return false;
     }
 
     @Override
     public Boolean isEnd(String content, char sign) {
-        if (citationStart && !citationEnd) {
-            return false;
-        }
-        if (citationStart && citationEnd) {
+        if (citationStart && (content.contains("”") || content.contains("\""))) {
             value = content;
             return true;
         }
@@ -71,11 +68,14 @@ public class Name implements ITextTag {
 
     @Override
     public String getValue() {
+        value = value.replaceAll("\"|„|”", "");
         return value;
     }
 
     @Override
     public void clear() {
+        wrongAssumption = false;
+        citationStart = false;
         value = null;
     }
 

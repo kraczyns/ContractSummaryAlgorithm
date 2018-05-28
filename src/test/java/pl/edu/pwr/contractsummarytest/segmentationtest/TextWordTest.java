@@ -73,6 +73,10 @@ public class TextWordTest {
                 {"Zofia mieszka przy ul. Grabiszyńskiej 18/5.", new ArrayList<String>(
                         Arrays.asList("Zofia", "mieszkać", "przy", "ul. Grabiszyńska 18/5")
                 )},
+                {
+                    "Urodziłam się 15 października 1994 roku.",
+                        new ArrayList<String>(Arrays.asList("urodzić", "się", "15 październik 1994", "rok"))
+                },
                 {"..........................................................\t\t\t\t\t07.08.2018 r.  \n" +
                         "\n" +
                         "Umowa o pracę zawarta na czas nieokreślony\n" +

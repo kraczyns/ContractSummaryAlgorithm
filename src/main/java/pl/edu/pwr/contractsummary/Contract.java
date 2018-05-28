@@ -54,7 +54,7 @@ public class Contract {
 
     public String[][] getSideValues() { return new String[][] {sides.get(0).getContractTypeFields(), sides.get(1).getContractTypeFields()};}
 
-    public String[][] getSideHeaders() { return new String[][] {sides.get(0).getDetailsHeaders(), sides.get(1).getDetailsHeaders()};}
+    public String[][] getSideHeaders(String language) { return new String[][] {sides.get(0).getDetailsHeaders(language), sides.get(1).getDetailsHeaders(language)};}
 
     public String[] getDetailsValues() {
         if (null != iContractType) {
@@ -64,9 +64,9 @@ public class Contract {
         }
     }
 
-    public String[] getDetailsHeaders() {
+    public String[] getDetailsHeaders(String language) {
         if (null != iContractType) {
-        return iContractType.getDetailsHeaders();
+        return iContractType.getDetailsHeaders(language);
     } else {
         return new String[]{"null"};
     } }

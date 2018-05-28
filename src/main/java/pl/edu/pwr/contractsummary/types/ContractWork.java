@@ -95,6 +95,11 @@ public class ContractWork implements IContractTypes {
     private void findDeadlineStartDate(Text text) {
         Sentence sentence = findSentence(text, Constants.START_DATE, Tag.date);
         List<String> dates = new ArrayList<String>();
+        startDate = "";
+        deadline = "";
+        if (null == sentence) {
+            sentence = Sentence.findSentenceWithCounter(text.getSentences(), new String[] {"zobowiązywać", "termin", "dzień"}, 2);
+        }
         if (null != sentence) {
             for (Word word : sentence.getWords()) {
                 if (word.getTag() == Tag.date ) {
@@ -114,27 +119,54 @@ public class ContractWork implements IContractTypes {
             }
         }
 
-        startDate = "";
-        deadline = "";
+        if (dates.size() != 2) {
+            if (dates.size() == 1) {
+                startDate = dates.get(0);
+                Sentence tryOneMoreTime = findSentence(text, Constants.END_DATE, Tag.date);
+                if (null != tryOneMoreTime) {
+                    for (Word wordAgain : tryOneMoreTime.getWords()) {
+                        if (wordAgain.getTag() == Tag.date) {
+                            deadline = wordAgain.getContent();
+                            return;
+                        }
+                    }
+                }
+            } else {
+                Sentence tryOneMoreTime = findSentence(text, Constants.END_DATE, Tag.date);
+                if (null != tryOneMoreTime) {
+                    for (Word wordAgain : tryOneMoreTime.getWords()) {
+                        if (wordAgain.getTag() == Tag.date) {
+                            deadline = wordAgain.getContent();
+                            return;
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     private void findDescription(Text text) {
         Sentence sentence = Sentence.findSentenceWithCounter(text.getSentences(), Constants.CONTRACT_WORK_DESC, 4);
         description = "";
+        Boolean isDesc = false;
         if(null != sentence) {
-            String[] parts = sentence.getContent().split(":");
-            if (parts.length > 1) {
-                String[] otherParts = parts[1].split(" ");
-                for (String part : otherParts) {
-                    Word word = new Word(part);
-                    if (!(null != word.getMorfologikOutput() && word.getMorfologikOutput().contains("subst")) && description.split(" ").length == 3) {
-                        description = description.trim().replaceAll("\\.","");
+            for (Word word : sentence.getWords()) {
+                if (isDesc) {
+                    if (description.split(" ").length > 3 || Utils.areStringsSame(word.getContent(), "opis")) {
+                        description = description.trim().replaceAll("\\.|,", "");
                         return;
                     }
-                    if (!Utils.isStringContainingDigits(part.trim()) && part != "") {
-                        description += Word.useMorfologik(part) + " ";
+                    if (!(null != word.getMorfologikOutput() && word.getMorfologikOutput().contains("subst")) && description.split(" ").length == 3) {
+                        description = description.trim().replaceAll("\\.|,", "");
+                        return;
                     }
-
+                    if (!Utils.isStringContainingDigits(word.getContent().trim()) && word.getContent() != "") {
+                        description += word.getContent() + " ";
+                    }
+                }
+                if (word.getTag() == Tag.descMark) {
+                    isDesc = true;
                 }
             }
         }
@@ -147,7 +179,7 @@ public class ContractWork implements IContractTypes {
     }
 
     @Override
-    public String[] getDetailsHeaders() {
-        return Constants.CONTRACT_WORK_DETAILS;
+    public String[] getDetailsHeaders(String language) {
+        return language.equals("ENG") ? Constants.CONTRACT_WORK_DETAILS_ENG : Constants.CONTRACT_WORK_DETAILS_PL;
     }
 }

@@ -1,5 +1,6 @@
 package pl.edu.pwr.contractsummary.segmentation.tags;
 
+import pl.edu.pwr.contractsummary.segmentation.Word;
 import pl.edu.pwr.utils.Utils;
 
 public class Prize implements ITextTag {
@@ -23,7 +24,11 @@ public class Prize implements ITextTag {
     @Override
     public Boolean isEnd(String content, char sign) {
         String[] parts = content.replaceAll("(|)", "").split(" ");
-        if (Utils.areStringsSame(parts[parts.length - 1].replaceAll("\\.|,",""), "zł") || Utils.areStringsSame(parts[parts.length - 1].replaceAll("\\.|,",""), "złoty")) {
+        if (Utils.areStringsSame(parts[parts.length - 1].replaceAll("\\.|,",""), "zł") || Utils.areStringsSame(Word.useMorfologik(parts[parts.length - 1].replaceAll("\\.|,","")), "złoty")) {
+            value = content;
+            return true;
+        } else if (!Utils.isStringContainingOnlyDigits(parts[parts.length - 1].trim()) && !content.trim().contains("(")){
+            wrongAssumption = true;
             value = content;
             return true;
         }
@@ -45,7 +50,7 @@ public class Prize implements ITextTag {
             value += parts[i];
         }
         value += " ";
-        value += parts[parts.length-1];
+        value += parts[parts.length-1].replaceAll("\\.","").replaceAll(",","");
         return value;
     }
 

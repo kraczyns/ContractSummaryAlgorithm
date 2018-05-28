@@ -38,33 +38,35 @@ public class SummaryXML {
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
             document = docBuilder.newDocument();
 
-            Element rootElement = document.createElement("CONTRACT");
+            String[] HEADERS_PL = new String[] {"UMOWA", "NAGŁÓWKI", "OGÓLNE", "STRONY", "PIERWSZA_STRONA", "DRUGA_STRONA", "SZCZEGÓŁY"};
+            String[] HEADERS_ENG = new String[] {"CONTRACT", "HEADERS", "GENERAL", "SIDES", "FIRST_SIDE", "SECOND_SIDE", "DETAILS"};
+            Element rootElement = document.createElement(HEADERS_PL[0]);
             document.appendChild(rootElement);
 
-            Element headers = document.createElement("HEADERS");
+            Element headers = document.createElement(HEADERS_PL[1]);
             rootElement.appendChild(headers);
-            for (int i = 0; i < Constants.CONTRACT_HEADERS.length; i++){
-                Element elem = document.createElement(Constants.CONTRACT_HEADERS[i]);
+            for (int i = 0; i < Constants.CONTRACT_HEADERS_PL.length; i++){
+                Element elem = document.createElement(Constants.CONTRACT_HEADERS_PL[i]);
                 elem.appendChild(document.createTextNode(contractHeadersValues[i]));
                 headers.appendChild(elem);
             }
 
-            Element general = document.createElement("GENERAL");
+            Element general = document.createElement(HEADERS_PL[2]);
             rootElement.appendChild(general);
 
-            for (int i = 0; i < Constants.CONTRACT_GENERAL.length; i++){
-                Element elem = document.createElement(Constants.CONTRACT_GENERAL[i]);
+            for (int i = 0; i < Constants.CONTRACT_GENERAL_PL.length; i++){
+                Element elem = document.createElement(Constants.CONTRACT_GENERAL_PL[i]);
                 elem.appendChild(document.createTextNode(contractGeneralValues[i]));
                 general.appendChild(elem);
-                if (Constants.CONTRACT_GENERAL[i] == "SIDES") {
-                    Element side1 = document.createElement("FIRST_SIDE");
+                if (Constants.CONTRACT_GENERAL_PL[i].equals(HEADERS_PL[3])) {
+                    Element side1 = document.createElement(HEADERS_PL[4]);
                     elem.appendChild(side1);
                     for (int j = 0; j < contractSidesHeaders[0].length; j++) {
                         Element element = document.createElement(contractSidesHeaders[0][j]);
                         element.appendChild(document.createTextNode(contractSidesValues[0][j]));
                         side1.appendChild(element);
                     }
-                    Element side2 = document.createElement("SECOND_SIDE");
+                    Element side2 = document.createElement(HEADERS_PL[5]);
                     elem.appendChild(side2);
                     for (int j = 0; j < contractSidesHeaders[1].length; j++) {
                         Element element = document.createElement(contractSidesHeaders[1][j]);
@@ -74,7 +76,7 @@ public class SummaryXML {
                 }
             }
 
-            Element details = document.createElement("DETAILS");
+            Element details = document.createElement(HEADERS_PL[6]);
             rootElement.appendChild(details);
 
             for (int i = 0; i < contractDetailsHeaders.length; i++){

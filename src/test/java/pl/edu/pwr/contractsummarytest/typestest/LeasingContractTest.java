@@ -127,6 +127,69 @@ public class LeasingContractTest {
                         "1100 złoty",
                         "",
                         "2200 złoty"
+                },
+                {
+                    "UMOWA NAJMU LOKALU MIESZKALNEGO\n" +
+                            "Zawarta w dniu 15.05.2018 r. we Wrocławiu pomiędzy\n" +
+                            "1. Adamem Nowakiem legitymującym się dowodem osobistym nr AWG 100020,\n" +
+                            "wydanym przez Prezydenta Wrocławia, zamieszkałym we Wrocławiu\n" +
+                            "przy ul. Komandorskiej 56/9 zwanym w treści umowy „Wynajmującym\", a\n" +
+                            "2. Anną Kowalską legitymują się dowodem osobistym nr AWW 99892,\n" +
+                            "wydanym przez Burmistrza Kluczborka, zamieszkałą w Kluczborku\n" +
+                            "przy ul. Zagony 16 zwanym w treści umowy \"Najemcą\", o następującej\n" +
+                            "treści:\n" +
+                            "§ 1.\n" +
+                            "Wynajmujący oświadcza, że jest właścicielem mieszkania położonego na piątym piętrze \n" +
+                            "w budynku znajdującym się we Wrocławiu przy ul. Kwiatowej 6/7, a składającego się z 2 pokoi, kuchni, łazienki oraz balkonu,\n" +
+                            "o łącznej powierzchni 30 m2.\n" +
+                            "§ 2.\n" +
+                            "1. Wynajmujący wynajmuje i oddaje w użytkowanie Najemcy cały wymieniony w § 1 lokal\n" +
+                            "wraz z urządzeniami (meble, sprzęt RTV, sprzęt gospodarstwa domowego).\n" +
+                            "2. Wykaz urządzeń wymienionych w pkt. 1 oraz opis stanu technicznego ww. lokalu stanowi\n" +
+                            "załącznik nr 1 do niniejszej umowy.\n" +
+                            "3. Obejmując przedmiot najmu Najemca nie wnosi zastrzeżeń do jego stanu technicznego.\n" +
+                            "§ 3.\n" +
+                            "1. Czynsz najmu strony ustalają w wysokości 2200 zł (słownie dwa tysiące dwieście złotych) miesięcznie.\n" +
+                            "2. Czynsz najmu płatny będzie z góry do dnia 20.05.2018 każdego miesiąca do rąk\n" +
+                            "Wynajmującego (przelewem na jego konto osobiste).\n" +
+                            "§ 4.\n" +
+                            "Strony ustalają, iż wszelkie koszty i świadczenia związane z eksploatacją lokalu\n" +
+                            "mieszkalnego, przez czas trwania umowy, ponosić będzie Najemca.\n" +
+                            "§ 5.\n" +
+                            "Najemcy nie wolno oddawać przedmiotu najmu w podnajem ani bezpłatne używanie osobom\n" +
+                            "trzecim.\n" +
+                            "§ 6. \n" +
+                            "Wszelkie adaptacje i ulepszenia przedmiotu wynajmu wymagają pisemnej zgody\n" +
+                            "Wynajmującego.\n" +
+                            "§ 7.\n" +
+                            "1. Po zakończeniu najmu Najemca zobowiązany jest zwrócić lokal wraz z wyposażeniem\n" +
+                            "wstanie niepogorszonym, wynikającym z normalnej eksploatacji.\n" +
+                            "2. Najemca wpłaca kaucję w wysokości 2200 zł (słownie dwa tysiące dwieście złotych), która podlega zwrotowi po przekazaniu lokalu w\n" +
+                            "stanie niepogorszonym Wynajmującemu.\n" +
+                            "§ 8.\n" +
+                            "Umowa niniejsza zawarta została na czas (nieokreślony -wówczas każdej ze stron przysługuje\n" +
+                            "prawo wypowiedzenia w terminie 1 miesiąca ) określony do dnia 20.06.2019 i\n" +
+                            "po upływie tego okresu przestaje obowiązywać, bez uprzedniego wypowiedzenia.\n" +
+                            "§ 9.\n" +
+                            "Wszelkie zmiany i uzupełnienia umowy wymagają formy pisemnej, w formie aneksu.\n" +
+                            "§ 10.\n" +
+                            "Koszty zawarcia umowy ponosi Wynajmujący.\n" +
+                            "§ 11.\n" +
+                            "W sprawach nie uregulowanych niniejszą umową mają zastosowanie przepisy kodeksu\n" +
+                            "cywilnego.\n" +
+                            "§ 12.\n" +
+                            "Umowę sporządzono w 2 jednobrzmiących egzemplarzach, po 1 dla każdej ze\n" +
+                            "stron.\n" +
+                            "Wynajmujący Najemca",
+                        "lokal mieszkalny",
+                        "2",
+                        "ul. Kwiatowa 6/7",
+                        "czas nieokreślony",
+                        "",
+                        "2200 złoty",
+                        "",
+                        "2200 złoty"
+
                 }
         });
     }

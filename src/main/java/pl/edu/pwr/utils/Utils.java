@@ -115,7 +115,8 @@ public class Utils {
 
     public static Boolean isPrize(String string) {
         String[] parts = string.split(" ");
-        if(parts.length > 1 && Utils.isStringContainingOnlyDigits(parts[0]) && Utils.areStringsSame(parts[parts.length - 1],"złoty")) {
+        if(parts.length > 1 && Utils.isStringContainingOnlyDigits(parts[0]) &&
+                (Utils.areStringsSame(parts[parts.length - 1],"złoty") || Utils.areStringsSame(parts[parts.length - 1],"zł"))) {
             return true;
         }
         return false;
@@ -163,6 +164,35 @@ public class Utils {
             return true;
         }
         return false;
+    }
+
+    public static Boolean isAllUpperCase(String string) {
+        for (int i = 0; i < string.trim().length(); i++) {
+            char sign = string.charAt(i);
+            if (!Character.isUpperCase(sign)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static Boolean isID(String string) {
+        if (string.trim().length() != 0 && Character.isUpperCase(string.trim().charAt(0)) && Character.isDigit(string.trim().charAt(string.length() - 1))) {
+            return true;
+        }
+        return false;
+    }
+
+    public static String wordMapper(String word, String[] subj, String[] verb) {
+
+        int counter = 0;
+        for (String str : verb) {
+            if (Utils.areStringsSame(word, str)) {
+                return subj[counter];
+            }
+            counter++;
+        }
+        return word;
     }
 
     public static Boolean isUpperCase(char sign) {

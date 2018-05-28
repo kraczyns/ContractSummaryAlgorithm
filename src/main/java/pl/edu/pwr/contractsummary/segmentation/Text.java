@@ -114,11 +114,11 @@ public class Text {
                 char sign = sentence.content.charAt(i);
                 if (PCM) {
                     String content = sentence.content.substring(begin, i);
-                    textTag = textTagImpl.getTag(content, sign, sentence.getWords().isEmpty());
+                    textTag = textTagImpl.getTag(content.trim(), sign, sentence.getWords().isEmpty());
                     if (null == textTag) {
                         sentence.addWord(content.toLowerCase());
                         begin = i;
-                    } else if (textTag.isEnd(content, sign)){
+                    } else if (textTag.isEnd(content.trim(), sign)){
                             if (textTag.back()) {
                                 String[] parts = content.split(" ");
                                 for (String part : parts) {
@@ -153,7 +153,7 @@ public class Text {
     public void sentencesSegmentation() {
 
         Boolean PCM = false;
-
+        Boolean PON = false; //Potential Ordinal Number
         int begin = 0;
 
         for (int i = 0; i < text.length(); i++) {
@@ -166,25 +166,48 @@ public class Text {
                             sentences.add(new Sentence(content.trim()));
                             begin = i;
                         }
-                        PCM = false;
                     }
-                    else {
                         PCM = false;
+                } else if(PON) {
+                     if (isON(sign)) {
+                        String content = text.substring(begin, i);
+                        sentences.add(new Sentence(content.trim()));
+                        begin = i;
                     }
+                     PON = false;
                 }
 
                 if (isPCM(sign)) {
                     PCM = true;
+                } else if (isPON(sign)) {
+                    PON = true;
                 }
             }
         }
 
         if (PCM) {
             String content = text.substring(begin, text.length());
-            sentences.add(new Sentence(content.trim()));
+            if (!content.equals("")) {
+                sentences.add(new Sentence(content.trim()));
+            }
         }
     }
 
+    private Boolean isPON(char sign) {
+        if (sign == ':') {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    private Boolean isON(char sign) {
+        if (sign == '§') {
+            return true;
+        } else {
+            return false;
+        }
+    }
     private boolean isCMDate(String content, char sign) {
         String[] parts = content.split(" ");
         if (parts.length > 0) {

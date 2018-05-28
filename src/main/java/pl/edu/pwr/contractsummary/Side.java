@@ -4,6 +4,7 @@ import pl.edu.pwr.contractsummary.segmentation.Sentence;
 import pl.edu.pwr.contractsummary.segmentation.Tag;
 import pl.edu.pwr.contractsummary.segmentation.Word;
 import pl.edu.pwr.utils.Constants;
+import pl.edu.pwr.utils.Utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,10 +14,7 @@ public class Side implements IContractTypes{
     private String name;
     private String address;
     private String city;
-    private String PESEL;
     private String id;
-    private String REGON;
-    private String NIP;
     private String representative;
     private Boolean company;
     private String role;
@@ -25,10 +23,7 @@ public class Side implements IContractTypes{
         name = "";
         address = "";
         city = "";
-        PESEL = "";
         id = "";
-        REGON = "";
-        NIP = "";
         representative = "";
         company = false;
         role = "";
@@ -43,6 +38,7 @@ public class Side implements IContractTypes{
                 if (word.getContent().equals("a")) {
                     sides.add(sentence.getWords().subList(0, i));
                     sides.add(sentence.getWords().subList(i, sentence.getWords().size()));
+                    return sides;
                 }
             }
         }
@@ -65,20 +61,19 @@ public class Side implements IContractTypes{
     private static Side extractSide(List<Word> side) {
         Side newSide = new Side();
         Boolean role = false;
-        Boolean id = false;
         for (Word word : side) {
             if (role) {
                 role = false;
-                newSide.role = word.getContent();
-            } else if (id) {
-                if (newSide.id.equals("")) {
-                    newSide.id = word.getContent();
+                if (null != word.getMorfologikOutput()) {
+                    newSide.role = word.getMorfologikOutput().contains("verb") || word.getContent().charAt(word.getContent().length()-1) == 'ć' ?
+                            Utils.wordMapper(word.getContent(), Constants.LIST_SUBJ, Constants.LIST_VERB) : word.getContent();
                 } else {
-                    id = false;
-                    newSide.id += " " + word.getContent();
+                    newSide.role = word.getContent().charAt(word.getContent().length()-1) == 'ć' ?
+                            Utils.wordMapper(word.getContent(), Constants.LIST_SUBJ, Constants.LIST_VERB) : word.getContent();
                 }
-            }
-            else if(word.getTag() == Tag.otherName) {
+            } else if (word.getTag() == Tag.id) {
+                newSide.id = word.getContent();
+            } else if(word.getTag() == Tag.otherName && newSide.name == "") {
                 newSide.company = true;
                 newSide.name = word.getContent();
             } else if (word.getTag() == Tag.firstNameLastName) {
@@ -93,8 +88,6 @@ public class Side implements IContractTypes{
                 newSide.city = word.getContent();
             } else if (word.getContent().equals("dalej")) {
                 role = true;
-            } else if (word.getContent().equals("osobisty")) {
-                id = true;
             }
         }
         return newSide;
@@ -119,18 +112,6 @@ public class Side implements IContractTypes{
         return id;
     }
 
-    public String getNIP() {
-        return NIP;
-    }
-
-    public String getPESEL() {
-        return PESEL;
-    }
-
-    public String getREGON() {
-        return REGON;
-    }
-
     public String getRepresentative() {
         return representative;
     }
@@ -138,20 +119,18 @@ public class Side implements IContractTypes{
     @Override
     public String[] getContractTypeFields() {
         if(company) {
-            return new String[] {company.toString(), name, address, city,
-            REGON, NIP, representative, role};
+            return new String[] {company.toString(), name, address, city, representative, role};
         } else {
-            return new String[] {company.toString(), name, address, city,
-                    PESEL, id, role};
+            return new String[] {company.toString(), name, address, city, id, role};
         }
     }
 
     @Override
-    public String[] getDetailsHeaders() {
+    public String[] getDetailsHeaders(String language) {
         if(company) {
-            return Constants.SIDE_HEADERS_COMPANY;
+            return language.equals("ENG") ? Constants.SIDE_HEADERS_COMPANY_ENG : Constants.SIDE_HEADERS_COMPANY_PL;
         } else {
-            return Constants.SIDE_HEADERS_NONCOMPANY;
+            return language.equals("ENG") ? Constants.SIDE_HEADERS_NONCOMPANY_ENG : Constants.SIDE_HEADERS_NONCOMPANY_PL;
         }
     }
 }
