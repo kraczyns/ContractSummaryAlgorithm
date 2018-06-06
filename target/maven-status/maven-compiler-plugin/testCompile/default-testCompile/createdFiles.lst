@@ -9,6 +9,7 @@ pl\edu\pwr\contractsummarytest\typestest\ContractTerminationTest.class
 pl\edu\pwr\contractsummarytest\ContractTest$Field.class
 pl\edu\pwr\contractsummarytest\segmentationtest\WordTest.class
 pl\edu\pwr\contractsummarytest\typestest\LeasingContractTest.class
+pl\edu\pwr\contractsummarytest\SideTest.class
 pl\edu\pwr\contractsummarytest\typestest\ContractOfMandateTest.class
 pl\edu\pwr\contractsummarytest\typestest\EmploymentContractTest.class
 pl\edu\pwr\contractsummarytest\segmentationtest\DateTest.class

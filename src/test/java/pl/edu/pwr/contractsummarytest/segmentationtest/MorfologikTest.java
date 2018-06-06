@@ -36,7 +36,8 @@ public class MorfologikTest {
                 {"począwszy", "począć"},
                 {"rozpoczęcia", "rozpoczęcie"},
                 {"karę", "kara"},
-                {"postaci", "postać"}
+                {"postaci", "postać"},
+                {"wykończenia", "wykończyć"}
 });
     }
     @Test

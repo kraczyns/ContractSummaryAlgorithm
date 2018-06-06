@@ -1,11 +1,16 @@
 package pl.edu.pwr;
 
+import net.sourceforge.tess4j.ITessAPI;
+import net.sourceforge.tess4j.Tesseract;
+import net.sourceforge.tess4j.TesseractException;
+import org.omg.CORBA.Environment;
 import pl.edu.pwr.contractsummary.Contract;
 import pl.edu.pwr.utils.SummaryXML;
 import pl.edu.pwr.utils.Utils;
 import pl.edu.pwr.contractsummary.segmentation.Text;
 
 import javax.xml.transform.TransformerException;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -13,8 +18,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws TransformerException {
-
-        String[] dirs = new String[] {"dzieło", "najem", "praca", "rozwiązanie", "zlecenie"};
+        File imageFile = new File("C:/Users/nieop/Desktop/mgr/umowy-pdf/um_nieokr_wyp.pdf");
+        Tesseract tess = new Tesseract();
+        try {
+            tess.setDatapath("C:/Users/nieop/IdeaProjects/contractsummary");
+            tess.setLanguage("pol");
+            String result = tess.doOCR(imageFile);
+            run(result).writeXMLtoFile("pdf", 1);
+            System.out.println(result);
+        } catch (TesseractException e) {
+            System.err.println(e.getMessage());
+        }
+     /*   String[] dirs = new String[] {"dzieło", "najem", "praca", "rozwiązanie", "zlecenie"};
         List<Long> elapsedTimes = new ArrayList<Long>();
         List<Integer> lengths = new ArrayList<Integer>();
         String string = "";
@@ -47,7 +62,7 @@ public class Main {
         }
         betterTmp = tmp.substring(0, tmp.length() - 2);
         betterTmp += ")";
-        System.out.println(betterTmp);
+        System.out.println(betterTmp);*/
     }
 
     private static SummaryXML run(String string) {

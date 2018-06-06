@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/../morfologik" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-fsa" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-fsa-builders" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-polish" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-speller" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-stemming" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../morfologik/morfologik-tools" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa-builders" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-polish" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-speller" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-stemming" charset="UTF-8" />
+    <file url="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-tools" charset="UTF-8" />
   </component>
 </project>

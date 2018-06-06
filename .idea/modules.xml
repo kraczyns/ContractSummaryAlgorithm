@@ -3,20 +3,20 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/contractsummary.iml" filepath="$PROJECT_DIR$/contractsummary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-fsa/morfologik-fsa.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-fsa/morfologik-fsa.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa/morfologik-fsa.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa/morfologik-fsa.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-fsa-builders/morfologik-fsa-builders.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-fsa-builders/morfologik-fsa-builders.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-fsa/morfologik-fsa.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-fsa/morfologik-fsa.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa-builders/morfologik-fsa-builders.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-fsa-builders/morfologik-fsa-builders.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-parent.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-fsa-builders/morfologik-fsa-builders.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-fsa-builders/morfologik-fsa-builders.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-parent.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-polish/morfologik-polish.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-polish/morfologik-polish.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-parent.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-parent.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-polish/morfologik-polish.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-polish/morfologik-polish.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-speller/morfologik-speller.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-speller/morfologik-speller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-polish/morfologik-polish.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-polish/morfologik-polish.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-speller/morfologik-speller.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-speller/morfologik-speller.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-stemming/morfologik-stemming.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-stemming/morfologik-stemming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-speller/morfologik-speller.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-speller/morfologik-speller.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-stemming/morfologik-stemming.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-stemming/morfologik-stemming.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-tools/morfologik-tools.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-tools/morfologik-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-stemming/morfologik-stemming.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-stemming/morfologik-stemming.iml" />
       <module fileurl="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-tools/morfologik-tools.iml" filepath="$USER_HOME$/Downloads/morfologik-stemming-2.1.5/morfologik-tools/morfologik-tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../morfologik/morfologik-tools/morfologik-tools.iml" filepath="$PROJECT_DIR$/../morfologik/morfologik-tools/morfologik-tools.iml" />
     </modules>
   </component>
 </project>
