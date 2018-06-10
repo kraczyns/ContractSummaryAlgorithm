@@ -540,7 +540,10 @@ public class Constants {
             "Kielce",
             "Świdnica",
             "Koszalin",
-            "Gniezno"
+            "Gniezno",
+            "Kluczbork",
+            "Pabianice",
+            "Olsztyn"
     };
 
     public static String[] FIRSTNAMES = {

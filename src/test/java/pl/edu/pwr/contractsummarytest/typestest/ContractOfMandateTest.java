@@ -59,7 +59,8 @@ public class ContractOfMandateTest {
                             "…………………………… …………………………….\n" +
                             " (podpis zleceniodawcy) (podpis zleceniobiorcy)",
                         "przewóz mebli", "400 złoty", "15.04.2009", "20.04.2009"
-                }
+                },
+
         });
     }
 

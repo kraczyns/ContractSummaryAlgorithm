@@ -2,48 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5fee3d87-8666-4b03-82bb-89220bbbca58" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_carrot2_morfologik_fsa_2_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_carrot2_morfologik_polish_2_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_carrot2_morfologik_stemming_2_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.ContractTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.ExtractHeaderTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.segmentationtest.DateTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.segmentationtest.MorfologikTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.segmentationtest.TextSentenceTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.segmentationtest.TextWordTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.segmentationtest.WordTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.typestest.ContractOfMandateTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.typestest.ContractTerminationTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.typestest.ContractWorkTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.typestest.EmploymentContractTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-pl.edu.pwr.contractsummarytest.typestest.LeasingContractTest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.ContractTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.ExtractHeaderTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.segmentationtest.DateTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.segmentationtest.MorfologikTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.segmentationtest.TextSentenceTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.segmentationtest.TextWordTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.segmentationtest.WordTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.typestest.ContractOfMandateTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.typestest.ContractTerminationTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.typestest.ContractWorkTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.typestest.EmploymentContractTest.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/pl.edu.pwr.contractsummarytest.typestest.LeasingContractTest.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/pl/edu/pwr/Main.class" afterPath="$PROJECT_DIR$/target/classes/pl/edu/pwr/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contractsummary.iml" afterPath="$PROJECT_DIR$/contractsummary.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java" afterPath="$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/MorfologikTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/MorfologikTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/IntegrationTests.java" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/IntegrationTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java" afterPath="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-1.xml" afterPath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-2.xml" afterPath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-3.xml" afterPath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-4.xml" afterPath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-5.xml" afterPath="$PROJECT_DIR$/xml/umowa-dzieło/umowa-5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-najem/umowa-1.xml" afterPath="$PROJECT_DIR$/xml/umowa-najem/umowa-1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-najem/umowa-2.xml" afterPath="$PROJECT_DIR$/xml/umowa-najem/umowa-2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-najem/umowa-3.xml" afterPath="$PROJECT_DIR$/xml/umowa-najem/umowa-3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-najem/umowa-4.xml" afterPath="$PROJECT_DIR$/xml/umowa-najem/umowa-4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-najem/umowa-5.xml" afterPath="$PROJECT_DIR$/xml/umowa-najem/umowa-5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-praca/umowa-1.xml" afterPath="$PROJECT_DIR$/xml/umowa-praca/umowa-1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-praca/umowa-2.xml" afterPath="$PROJECT_DIR$/xml/umowa-praca/umowa-2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-praca/umowa-3.xml" afterPath="$PROJECT_DIR$/xml/umowa-praca/umowa-3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-praca/umowa-4.xml" afterPath="$PROJECT_DIR$/xml/umowa-praca/umowa-4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-praca/umowa-5.xml" afterPath="$PROJECT_DIR$/xml/umowa-praca/umowa-5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-1.xml" afterPath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-2.xml" afterPath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-3.xml" afterPath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-4.xml" afterPath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-5.xml" afterPath="$PROJECT_DIR$/xml/umowa-rozwiązanie/umowa-5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-1.xml" afterPath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-1.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-2.xml" afterPath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-3.xml" afterPath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-3.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-4.xml" afterPath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-4.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-5.xml" afterPath="$PROJECT_DIR$/xml/umowa-zlecenie/umowa-5.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,8 +79,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
+            <state relative-caret-position="788">
+              <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -101,40 +88,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MorfologikTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/MorfologikTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContractWork.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractWork.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1103">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EmploymentContract.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/EmploymentContract.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
+            <state relative-caret-position="1632">
               <caret line="170" column="124" lean-forward="false" selection-start-line="170" selection-start-column="124" selection-end-line="170" selection-end-column="124" />
               <folding>
                 <element signature="method#findWorkingPlace#0;class#EmploymentContract#0" expanded="false" />
@@ -145,55 +102,87 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Constants.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java">
+      <file leaf-file-name="IntegrationTests.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/IntegrationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
-              <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="104" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tesseract.class" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/Downloads/tess4j-4.0.2.jar!/net/sourceforge/tess4j/Tesseract.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="63" column="24" lean-forward="false" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="33" lean-forward="false" selection-start-line="46" selection-start-column="33" selection-end-line="46" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Text.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Text.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2669">
-              <caret line="229" column="21" lean-forward="false" selection-start-line="229" selection-start-column="21" selection-end-line="229" selection-end-column="21" />
+            <state relative-caret-position="95">
+              <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
               <folding>
-                <element signature="method#extractHeaders#0;class#Text#0" expanded="false" />
-                <element signature="method#isContractTitle#0;class#Text#0" expanded="false" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractTermination.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractTermination.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LeasingContract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/LeasingContract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ContractOfMandate.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractOfMandate.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="156" column="124" lean-forward="false" selection-start-line="156" selection-start-column="124" selection-end-line="156" selection-end-column="124" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Contract.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/Contract.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+              <folding>
+                <element signature="method#getHeadersValues#0;class#Contract#0" expanded="false" />
+                <element signature="method#selectSentenceWhenContractWordAppearsFirst#0;class#Contract#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DelegatingMethodAccessorImpl.class" pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Word.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="116">
+              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SummaryXML.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/SummaryXML.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="227">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -237,6 +226,8 @@
       <find>Wro</find>
       <find>IGNORE</find>
       <find>START</find>
+      <find>EMPLOYMENT</find>
+      <find>ł</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\nieop\IdeaProjects\contractsummary\morfologik-stemming-master</dir>
@@ -253,7 +244,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractPeriod.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/HourlyDimension.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/ContractType.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummarytest/ContractTest.java" />
@@ -277,7 +267,6 @@
         <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/WordTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Utils.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/tags/Prize.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractWorkTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Tag.java" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java" />
@@ -302,12 +291,14 @@
         <option value="$PROJECT_DIR$/../ocr-tess4j-example-master/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java" />
         <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/MorfologikTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/IntegrationTests.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -331,10 +322,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -436,10 +425,21 @@
               <item name="contractsummarytest" type="462c0819:PsiDirectoryNode" />
               <item name="segmentationtest" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="contractsummary" type="b2602c69:ProjectViewProjectNode" />
+              <item name="contractsummary" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="contractsummarytest" type="462c0819:PsiDirectoryNode" />
+              <item name="typestest" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -461,8 +461,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.MorfologikTest.testMorfologik">
-    <configuration name="LeasingContractTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.IntegrationTests">
+    <configuration name="ContractWorkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="pl.edu.pwr.contractsummarytest.typestest.*" />
@@ -473,11 +473,61 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="pl.edu.pwr.contractsummarytest.typestest" />
-      <option name="MAIN_CLASS_NAME" value="pl.edu.pwr.contractsummarytest.typestest.LeasingContractTest" />
+      <option name="MAIN_CLASS_NAME" value="pl.edu.pwr.contractsummarytest.typestest.ContractWorkTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" value="[2]" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.edu.pwr.contractsummarytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="contractsummary" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="pl.edu.pwr.contractsummarytest" />
+      <option name="MAIN_CLASS_NAME" value="pl.edu.pwr.contractsummarytest.IntegrationTests" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="IntegrationTests.testContractGenerals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pl.edu.pwr.contractsummarytest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="contractsummary" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="pl.edu.pwr.contractsummarytest" />
+      <option name="MAIN_CLASS_NAME" value="pl.edu.pwr.contractsummarytest.IntegrationTests" />
+      <option name="METHOD_NAME" value="testContractGenerals" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" value="[0]" />
       <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -544,31 +594,6 @@
           </MavenRunnerParameters>
         </option>
       </MavenSettings>
-    </configuration>
-    <configuration name="MorfologikTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="pl.edu.pwr.contractsummarytest.segmentationtest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="contractsummary" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.edu.pwr.contractsummarytest.segmentationtest" />
-      <option name="MAIN_CLASS_NAME" value="pl.edu.pwr.contractsummarytest.segmentationtest.MorfologikTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
     </configuration>
     <configuration name="MorfologikTest.testMorfologik" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -876,48 +901,22 @@
       <listeners />
       <method />
     </configuration>
-    <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="pl.edu.pwr.contractsummarytest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="contractsummary" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pl.edu.pwr.contractsummarytest" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
     <list size="8">
-      <item index="0" class="java.lang.String" itemvalue="Application.Tesseract" />
-      <item index="1" class="java.lang.String" itemvalue="Maven.OCR Maven run" />
-      <item index="2" class="java.lang.String" itemvalue="Maven.Maven run" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.LeasingContractTest (1)" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.pl.edu.pwr.contractsummarytest in contractsummary" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.MorfologikTest" />
-      <item index="7" class="java.lang.String" itemvalue="JUnit.MorfologikTest.testMorfologik" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTests" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Tesseract" />
+      <item index="2" class="java.lang.String" itemvalue="Maven.OCR Maven run" />
+      <item index="3" class="java.lang.String" itemvalue="Maven.Maven run" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.IntegrationTests.testContractGenerals" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Main" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.MorfologikTest.testMorfologik" />
+      <item index="7" class="java.lang.String" itemvalue="JUnit.ContractWorkTest" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MorfologikTest.testMorfologik" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MorfologikTest" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.IntegrationTests.testContractGenerals" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ContractWorkTest" />
         <item index="2" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.pl.edu.pwr.contractsummarytest in contractsummary" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.LeasingContractTest (1)" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MorfologikTest.testMorfologik" />
       </list>
     </recent_temporary>
   </component>
@@ -935,39 +934,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MorfologikTest - 2018.06.05 at 21h 03m 12s.xml">
-      <configuration name="MorfologikTest" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 16m 21s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="MorfologikTest_testMorfologik - 2018.06.05 at 21h 03m 53s.xml">
-      <configuration name="MorfologikTest.testMorfologik" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 30m 03s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 38m 33s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 31m 57s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 40m 07s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 37m 06s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 41m 55s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 40m 59s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 43m 17s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 13h 43m 44s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 44m 05s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 14h 19m 45s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 45m 30s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests - 2018.06.10 at 14h 21m 15s.xml">
+      <configuration name="IntegrationTests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 45m 44s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests_testContractGenerals - 2018.06.10 at 13h 30m 43s.xml">
+      <configuration name="IntegrationTests.testContractGenerals" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="pl_edu_pwr_contractsummarytest_in_contractsummary - 2018.05.26 at 18h 47m 11s.xml">
-      <configuration name="pl.edu.pwr.contractsummarytest in contractsummary" configurationId="JUnit" />
+    <history-entry file="IntegrationTests_testContractGenerals - 2018.06.10 at 13h 31m 48s.xml">
+      <configuration name="IntegrationTests.testContractGenerals" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -978,9 +977,9 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40536278" sideWeight="0.39165446" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4274448" sideWeight="0.25768667" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4274448" sideWeight="0.76427525" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4274448" sideWeight="0.7423133" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.49707174" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -990,7 +989,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40536278" sideWeight="0.6083455" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40536278" sideWeight="0.60102487" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1053,28 +1052,10 @@
           <option name="timeStamp" value="582" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/SummaryXML.java</url>
-          <line>62</line>
-          <properties />
-          <option name="timeStamp" value="605" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/SummaryXML.java</url>
-          <line>69</line>
-          <properties />
-          <option name="timeStamp" value="606" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/LeasingContract.java</url>
           <line>38</line>
           <properties />
           <option name="timeStamp" value="615" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Sentence.java</url>
-          <line>14</line>
-          <properties />
-          <option name="timeStamp" value="616" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java</url>
@@ -1088,17 +1069,11 @@
           <properties />
           <option name="timeStamp" value="619" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java</url>
-          <line>27</line>
-          <properties />
-          <option name="timeStamp" value="621" />
-        </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="622" />
+      <option name="time" value="626" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
@@ -1115,29 +1090,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/tags/ITextTag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" lean-forward="false" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/EmploymentContractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1170">
-          <caret line="45" column="75" lean-forward="false" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/ExtractHeaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="29" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/carrot2/morfologik-polish/2.1.5/morfologik-polish-2.1.5.jar!/morfologik/stemming/polish/PolishStemmer.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -1212,7 +1164,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="657" column="0" lean-forward="false" selection-start-line="657" selection-start-column="0" selection-end-line="657" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,14 +1210,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractWorkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="266" column="62" lean-forward="false" selection-start-line="266" selection-start-column="62" selection-end-line="266" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/IContractTypes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1274,36 +1217,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1513">
-          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/Side.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="126" column="0" lean-forward="true" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractOfMandate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="156" column="124" lean-forward="false" selection-start-line="156" selection-start-column="124" selection-end-line="156" selection-end-column="124" />
-          <folding>
-            <element signature="e#5185#5186#0" expanded="false" />
-            <element signature="e#5264#5265#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractTermination.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="131" column="126" lean-forward="false" selection-start-line="131" selection-start-column="126" selection-end-line="131" selection-end-column="126" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1321,25 +1238,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractTerminationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/SideTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="169" column="0" lean-forward="false" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/SummaryXML.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1394">
-          <caret line="93" column="51" lean-forward="false" selection-start-line="93" selection-start-column="51" selection-end-line="93" selection-end-column="51" />
           <folding />
         </state>
       </provider>
@@ -1366,44 +1268,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/LeasingContract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="38" column="68" lean-forward="false" selection-start-line="38" selection-start-column="68" selection-end-line="38" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Sentence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="e#2579#2580#0" expanded="false" />
-            <element signature="e#2607#2608#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/LeasingContractTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3094">
-          <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/Contract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
-          <folding>
-            <element signature="method#getHeadersValues#0;class#Contract#0" expanded="false" />
-            <element signature="method#selectSentenceWhenContractWordAppearsFirst#0;class#Contract#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Text.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2669">
@@ -1415,37 +1279,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/src/main/java/com/nadeem/app/ocr/TesseractExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="29" lean-forward="false" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/README.md" />
+    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/src/main/java/com/nadeem/app/ocr/TesseractExample.java" />
     <entry file="file://$USER_HOME$/Downloads/morfologik-stemming-2.1.5/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../ocr-tess4j-example-master/pom.xml" />
     <entry file="jar://$USER_HOME$/Downloads/tess4j-4.0.2.jar!/net/sourceforge/tess4j/Tesseract.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -1462,43 +1305,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/segmentationtest/MorfologikTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
+        <state relative-caret-position="527">
           <caret line="39" column="42" lean-forward="false" selection-start-line="39" selection-start-column="42" selection-end-line="39" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="69" column="38" lean-forward="true" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractWork.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1103">
+        <state relative-caret-position="1292">
           <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9265">
+          <caret line="545" column="20" lean-forward="false" selection-start-line="545" selection-start-column="20" selection-end-line="545" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractTerminationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="112" column="9" lean-forward="true" selection-start-line="112" selection-start-column="9" selection-end-line="112" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractWorkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-99">
+          <caret line="266" column="62" lean-forward="false" selection-start-line="266" selection-start-column="62" selection-end-line="266" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/EmploymentContractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1157">
+          <caret line="45" column="75" lean-forward="false" selection-start-line="45" selection-start-column="75" selection-end-line="45" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/LeasingContractTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2973">
+          <caret line="192" column="17" lean-forward="false" selection-start-line="192" selection-start-column="17" selection-end-line="192" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/typestest/ContractOfMandateTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="20" column="17" lean-forward="false" selection-start-line="17" selection-start-column="3" selection-end-line="20" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Sentence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/segmentation/Word.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/SummaryXML.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0_91/jre/lib/rt.jar!/sun/reflect/DelegatingMethodAccessorImpl.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/Contract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding>
+            <element signature="method#getHeadersValues#0;class#Contract#0" expanded="false" />
+            <element signature="method#selectSentenceWhenContractWordAppearsFirst#0;class#Contract#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="788">
+          <caret line="72" column="5" lean-forward="false" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractOfMandate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="156" column="124" lean-forward="false" selection-start-line="156" selection-start-column="124" selection-end-line="156" selection-end-column="124" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/LeasingContract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="22" column="24" lean-forward="false" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/EmploymentContract.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
+        <state relative-caret-position="1632">
           <caret line="170" column="124" lean-forward="false" selection-start-line="170" selection-start-column="124" selection-end-line="170" selection-end-column="124" />
           <folding>
             <element signature="method#findWorkingPlace#0;class#EmploymentContract#0" expanded="false" />
@@ -1508,11 +1450,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/utils/Constants.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pl/edu/pwr/contractsummary/types/ContractTermination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="96" column="0" lean-forward="false" selection-start-line="96" selection-start-column="0" selection-end-line="104" selection-end-column="27" />
+        <state relative-caret-position="102">
+          <caret line="13" column="39" lean-forward="false" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pl/edu/pwr/contractsummarytest/IntegrationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="103" column="0" lean-forward="false" selection-start-line="103" selection-start-column="0" selection-end-line="103" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
